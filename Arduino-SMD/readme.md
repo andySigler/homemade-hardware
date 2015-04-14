@@ -32,8 +32,8 @@ This is my attempt at making an [Arduino Pro Mini](http://arduino.cc/en/Main/ard
 
 ###Bootloading
 
-This build does not use the ATMega328p, so in order to change the bootloader, you have to edit the avrdude.conf.
+This build does not use the ATMega328p, so in order to change the bootloader, you have to edit the `avrdude.conf`.
 
 1. Quit the Arduino IDE if it is open.
-2. Find where you've installed Arduino, right-click it, and select "Show Package Contents"
-3. Navigate all the way into "Contents/Resources/Java/hardware/tools/avr/etc" and you'll find the "avrdude.conf" file
+2. Find where you've installed Arduino, right-click it, and select `Show Package Contents`
+3. Navigate all the way into `Contents/Resources/Java/hardware/tools/avr/etc` and you'll find the `avrdude.conf` file
