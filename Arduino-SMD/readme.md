@@ -32,7 +32,7 @@ This is my attempt at making an [Arduino Pro Mini](http://arduino.cc/en/Main/ard
 
 ###Bootloading
 
-This build does not use the ATMega328p, so in order to change the bootloader, you have to edit the `avrdude.conf`.
+This build does not use the ATMega328p. Therefore, if for some reason you want to change the bootloader, you have to edit the `avrdude.conf` while bootloading. These steps will guide you through editing your `avrdude.conf` file. However, once done bootloading, these changes must be undone in order to send your sketches to the Arduino.
 
 #####Step 1
 Quit the Arduino IDE if it is open.
@@ -51,8 +51,14 @@ Comment that line out with an #, and add the new signature of the ATMega328. It 
 # signature   = 0x1e 0x95 0x0F;
 signature   = 0x1e 0x95 0x14;
 ```
-
-
+#####Step 6
+Restart the Arduino IDE, and you should be able to bootload the board.
+#####Step 7
+When you're done, change the `avrdude.conf` file back to it's original settings so that you can send your sketches to the board:
+```
+signature   = 0x1e 0x95 0x0F;
+# signature   = 0x1e 0x95 0x14;
+```
 
 
 
