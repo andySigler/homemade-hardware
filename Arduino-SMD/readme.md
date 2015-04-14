@@ -3,8 +3,9 @@
 
 ###Specifications
 
-* 3.3 volt on-board regulator
-* 16 MHz
 * Arduino Uno bootloader
-* FTDI programing headers'
+* 3.3v/16MHz
+* ATMega328 with all pins accessible
 * LED on pin 5 (not pin 13)
+* Onboard reset button
+* FTDI programing headers
