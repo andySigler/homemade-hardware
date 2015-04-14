@@ -28,3 +28,4 @@ This is my attempt at making an [Arduino Pro Mini](http://arduino.cc/en/Main/ard
 * [10,000 Ohm Resistor](http://www.digikey.com/product-detail/en/CC0603ZRY5V9BB104/311-1343-1-ND/2103127) x 3
 * [LED](http://www.digikey.com/product-search/en?pv7=2&k=160-1434-2-ND&mnonly=0&newproducts=0&ColumnSort=0&page=1&quantity=0&ptm=0&fid=0&pageSize=25) x 2
 * [Tactile Switch](http://www.digikey.com/product-detail/en/8-1437565-1/450-1941-ND/529677)
+* [Coin Cell Battery Holder](http://www.digikey.com/product-detail/en/BA2032/BA2032-ND/257744) (optional)
