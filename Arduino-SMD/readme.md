@@ -29,3 +29,11 @@ This is my attempt at making an [Arduino Pro Mini](http://arduino.cc/en/Main/ard
 * [LED](http://www.digikey.com/product-search/en?pv7=2&k=160-1434-2-ND&mnonly=0&newproducts=0&ColumnSort=0&page=1&quantity=0&ptm=0&fid=0&pageSize=25) x 2
 * [Tactile Switch](http://www.digikey.com/product-detail/en/8-1437565-1/450-1941-ND/529677)
 * [Coin Cell Battery Holder](http://www.digikey.com/product-detail/en/BA2032/BA2032-ND/257744) (optional)
+
+###Bootloading
+
+This build does not use the ATMega328p, so in order to change the bootloader, you have to edit the avrdude.conf.
+
+1. Quit the Arduino IDE if it is open.
+2. Find where you've installed Arduino, right-click it, and select "Show Package Contents"
+3. Navigate all the way into "Contents/Resources/Java/hardware/tools/avr/etc" and you'll find the "avrdude.conf" file
