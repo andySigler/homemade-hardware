@@ -37,3 +37,19 @@ This build does not use the ATMega328p, so in order to change the bootloader, yo
 1. Quit the Arduino IDE if it is open.
 2. Find where you've installed Arduino, right-click it, and select `Show Package Contents`
 3. Navigate all the way into `Contents/Resources/Java/hardware/tools/avr/etc` and you'll find the `avrdude.conf` file
+4. Open `avrdude.conf` in a text editor, and find the follow line for the ATMega328p:
+```
+signature   = 0x1e 0x95 0x0F;
+```
+5. Comment that line out with an #, and add the new signature of the ATMega328. It should like like the following now:
+```
+# signature   = 0x1e 0x95 0x0F;
+signature   = 0x1e 0x95 0x14;
+```
+
+
+
+
+
+
+
