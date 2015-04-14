@@ -12,4 +12,4 @@
 
 ###Pins
 
-![Pins](https://github.com/andySigler/homemade-hardware/blob/1faba1cfb78aad4ea1d613e22709be85f83f613e/Arduino-SMD/arduinoSMD.png)
+![Pins](https://github.com/andySigler/homemade-hardware/blob/master/Arduino-SMD/arduinoSMD.png)
