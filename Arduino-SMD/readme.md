@@ -11,7 +11,7 @@ This is my attempt at making an [Arduino Pro Mini](http://arduino.cc/en/Main/ard
 * LED on pin 5 (not pin 13)
 * Onboard reset button
 * FTDI programing headers
-* Optional solder points for coincell battery holder
+* Optional solder points for [coin cell battery holder](http://www.digikey.com/product-detail/en/BA2032/BA2032-ND/257744)
 
 ###Pinouts
 
