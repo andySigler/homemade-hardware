@@ -1,6 +1,8 @@
 #Homemade Arduino SMD
 ##A clone of the Arduino-Pro-Mini
 
+This is my attempt at making an [Arduino Pro Mini](http://arduino.cc/en/Main/arduinoBoardProMini). It's designed to be fabricated using a micro-milling machine, and takes into account all the limitations of such a process.
+
 ###Specifications
 
 * Arduino Uno bootloader
@@ -10,6 +12,6 @@
 * Onboard reset button
 * FTDI programing headers
 
-###Pins
+###Pinouts
 
 ![Pins](https://github.com/andySigler/homemade-hardware/blob/master/Arduino-SMD/pinout.png)
