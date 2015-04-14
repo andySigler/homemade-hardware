@@ -4,7 +4,7 @@
 ###Specifications
 
 * Arduino Uno bootloader
-* 3.3v/16MHz
+* 3.3 volts @ 16MHz
 * ATMega328 with all pins accessible
 * LED on pin 5 (not pin 13)
 * Onboard reset button
