@@ -3,7 +3,7 @@
 
 This is my attempt at making an [Arduino Pro Mini](http://arduino.cc/en/Main/arduinoBoardProMini). It's designed to be fabricated using a micro-milling machine, and takes into account all the limitations of such a process.
 
-###Specifications
+###Features
 
 * Arduino Uno bootloader
 * 3.3 volts @ 16MHz
@@ -11,6 +11,7 @@ This is my attempt at making an [Arduino Pro Mini](http://arduino.cc/en/Main/ard
 * LED on pin 5 (not pin 13)
 * Onboard reset button
 * FTDI programing headers
+* Optional solder points for coincell battery holder
 
 ###Pinouts
 
