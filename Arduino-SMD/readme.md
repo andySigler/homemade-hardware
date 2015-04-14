@@ -3,6 +3,10 @@
 
 This is my attempt at making an [Arduino Pro Mini](http://arduino.cc/en/Main/arduinoBoardProMini). It's designed to be fabricated using a micro-milling machine, and takes into account all the limitations of such a process.
 
+###Pinouts
+
+![Pins](https://github.com/andySigler/homemade-hardware/blob/master/Arduino-SMD/pinout.png)
+
 ###Features
 
 * Arduino Uno bootloader
@@ -14,6 +18,13 @@ This is my attempt at making an [Arduino Pro Mini](http://arduino.cc/en/Main/ard
 * FTDI programing headers
 * Optional solder points for [coin cell battery holder](http://www.digikey.com/product-detail/en/BA2032/BA2032-ND/257744)
 
-###Pinouts
+###Parts List
 
-![Pins](https://github.com/andySigler/homemade-hardware/blob/master/Arduino-SMD/pinout.png)
+* [ATMega328](http://www.digikey.com/product-detail/en/ATMEGA328-AUR/ATMEGA328-AURCT-ND/3440951)
+* [3.3 Volt Regulator](http://www.digikey.com/product-detail/en/MIC5205-3.3YM5%20TR/576-1259-1-ND/771886)
+* [16 MHz Resonator](http://www.digikey.com/product-detail/en/PRQC16.00SR1010V00L/1253-1339-1-ND/4879394)
+* [10 uF Pol. Capacitor](http://www.digikey.com/product-detail/en/T491A106K006AT7280/399-10116-1-ND/3759233) x 2
+* [0.1 uF Capacitor](http://www.digikey.com/product-detail/en/CC0603ZRY5V9BB104/311-1343-1-ND/2103127) x 3
+* [10,000 Ohm Resistor](http://www.digikey.com/product-detail/en/CC0603ZRY5V9BB104/311-1343-1-ND/2103127) x 3
+* [LED](http://www.digikey.com/product-search/en?pv7=2&k=160-1434-2-ND&mnonly=0&newproducts=0&ColumnSort=0&page=1&quantity=0&ptm=0&fid=0&pageSize=25) x 2
+* [Tactile Switch](http://www.digikey.com/product-detail/en/8-1437565-1/450-1941-ND/529677)
