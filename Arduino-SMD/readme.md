@@ -16,7 +16,7 @@ This is my attempt at making an [Arduino Pro Mini](http://arduino.cc/en/Main/ard
 
 ###Pinouts
 
-![Pins](https://github.com/andySigler/homemade-hardware/blob/master/Arduino-SMD/pinouts.png)
+![Pins](https://github.com/andySigler/homemade-hardware/blob/master/Arduino-SMD/pins.png)
 
 ###Parts List
 
