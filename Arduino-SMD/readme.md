@@ -7,11 +7,10 @@ This is my attempt at making an [Arduino Pro Mini](http://arduino.cc/en/Main/ard
 
 * Arduino Uno bootloader
 * 3.3 volts @ 16MHz
-* ATMega328 with all pins accessible
-* 3.5cm x 2cm (1.37" x 0.8")
+* Dimension: 3.5cm x 2cm (1.37" x 0.8")
 * LED on pin 5 (not pin 13)
+* FTDI programming headers
 * Onboard reset button
-* FTDI programing headers
 * Solder points for [coin cell battery holder](http://www.digikey.com/product-detail/en/BA2032/BA2032-ND/257744)
 
 ###Pinouts
