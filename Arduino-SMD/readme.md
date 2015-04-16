@@ -1,7 +1,7 @@
 #Homemade SMD Microcontroller
 ##A clone of the Arduino-Pro-Mini
 
-This is a clone of the [Arduino Pro Mini](http://arduino.cc/en/Main/arduinoBoardProMini) made with the tools at ITP. It's design is 
+This is a clone of the [Arduino Pro Mini](http://arduino.cc/en/Main/arduinoBoardProMini). It's design is constrained by the rapid prototyping tools and processes used to make it.
 
 ###Features
 
@@ -16,6 +16,19 @@ This is a clone of the [Arduino Pro Mini](http://arduino.cc/en/Main/arduinoBoard
 ###Pinouts
 
 ![Pins](https://github.com/andySigler/homemade-hardware/blob/master/Arduino-SMD/pinout.png)
+
+###Building
+
+The board is designed to be milled on a micro-milling machine from copper clad plates. The job requires:
+* 1/64" and 1/32" endmill to form routes
+* 20 and 28 gauge drill bits for vias and holes
+* 1/16" endmill for the dimension
+
+Toolpath lines are drawn with the `wire` command on `.brd` layers `114`, `115`, `117`, and `118`.
+
+Dynamask solder mask is then applied, and the board is exposed in a homemade UV lightbox for 45 seconds. This exposure is made through transparency film with the `.brd` `tStop` and `bStop` printed in black.
+
+Vias are filled with solid 20 gauge wire, bent at 90 degree angles on either side to prevent them from falling out. Solder paste is then applied to the vias, and reflowed to make connections between the top and bottom.
 
 ###Parts List
 
