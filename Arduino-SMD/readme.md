@@ -3,7 +3,7 @@
 
 This is a redesign of the [Arduino Pro Mini](http://arduino.cc/en/Main/arduinoBoardProMini). The design is constrained by rapid prototyping tools and processes used to make the PCB. The most notabe constraints are micro-milling machines and DIY vias.
 
-![Board](https://github.com/andySigler/homemade-hardware/blob/master/Arduino-SMD/smd_shot.jpg)
+![Board](https://github.com/andySigler/homemade-hardware/blob/master/Arduino-SMD/smd_shot.JPG)
 
 ###Features
 
