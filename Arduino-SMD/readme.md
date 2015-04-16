@@ -29,11 +29,11 @@ This is a clone of the [Arduino Pro Mini](http://arduino.cc/en/Main/arduinoBoard
 * [Tactile Switch](http://www.digikey.com/product-detail/en/8-1437565-1/450-1941-ND/529677)
 * [Coin Cell Battery Holder](http://www.digikey.com/product-detail/en/BA2032/BA2032-ND/257744) (optional)
 
-###Bootloading
+###Burning a Bootloader
 
-If for some reason you want to change the bootloader, you have to edit the `avrdude.conf` before bootloading. This build uses the ATMega328, and not the more common ATMega328p, making the Arduino IDE unable to recognize the chip. This can be fixed by adding a new device signature to the Arduino IDE's 'avrdude.conf' file.
+This build uses the ATMega328, and not the more common ATMega328p, making the Arduino IDE unable to recognize the chip when burning a bootloader. This can be fixed by adding a new device signature to the Arduino IDE's 'avrdude.conf' file.
 
-The steps below will guide you through adding the device signature in order to bootload the ATMega328. However, once done bootloading, these changes must be undone in order to then send sketches to the Arduino.
+The steps below will guide you through adding the device signature for the ATMega328. However, these changes must be undone in order to send sketches to the Arduino after burning the bootloader.
 
 #####Step 1
 Quit the Arduino IDE if it is open.
