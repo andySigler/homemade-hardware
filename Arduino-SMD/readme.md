@@ -32,7 +32,7 @@ Vias are filled with solid 24 gauge wire, bent at 90 degree angles on either sid
 
 ###Parts List
 
-* [ATMega328](http://www.digikey.com/product-detail/en/ATMEGA328-AUR/ATMEGA328-AURCT-ND/3440951) (this build does not use the [ATMega328p](http://www.digikey.com/product-detail/en/ATMEGA328P-AUR/ATMEGA328P-AURCT-ND/3789455))
+* [ATMega328](http://www.digikey.com/product-detail/en/ATMEGA328-AUR/ATMEGA328-AURCT-ND/3440951) (this build does not use the more popular [ATMega328p](http://www.digikey.com/product-detail/en/ATMEGA328P-AUR/ATMEGA328P-AURCT-ND/3789455))
 * [3.3 Volt Regulator](http://www.digikey.com/product-detail/en/MIC5205-3.3YM5%20TR/576-1259-1-ND/771886)
 * [16 MHz Resonator](http://www.digikey.com/product-detail/en/PRQC16.00SR1010V00L/1253-1339-1-ND/4879394)
 * [10 uF Pol. Capacitor](http://www.digikey.com/product-detail/en/T491A106K006AT7280/399-10116-1-ND/3759233) x 2
@@ -44,7 +44,7 @@ Vias are filled with solid 24 gauge wire, bent at 90 degree angles on either sid
 
 ###Burning a Bootloader
 
-This build uses the ATMega328, and not the more common ATMega328p, making the Arduino IDE unable to recognize the chip when burning a bootloader. This can be fixed by adding a new device signature to the Arduino IDE's 'avrdude.conf' file.
+This build does not use the ATMega328p, but instead the ATMega328 because that's what I had on me. This will make the Arduino IDE unable to recognize the chip when burning a bootloader, but you can be fix it by adding a new device signature to the Arduino IDE's 'avrdude.conf' file.
 
 The steps below will guide you through adding the device signature for the ATMega328. However, these changes must be undone in order to send sketches to the board after burning the bootloader.
 
