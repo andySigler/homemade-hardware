@@ -1,4 +1,4 @@
-#Homemade Arduino SMD
+#Homemade SMD Microcontroller
 ##A clone of the Arduino-Pro-Mini
 
 This is a clone of the [Arduino Pro Mini](http://arduino.cc/en/Main/arduinoBoardProMini) made with the tools at ITP. It's design is 
@@ -33,7 +33,7 @@ This is a clone of the [Arduino Pro Mini](http://arduino.cc/en/Main/arduinoBoard
 
 This build uses the ATMega328, and not the more common ATMega328p, making the Arduino IDE unable to recognize the chip when burning a bootloader. This can be fixed by adding a new device signature to the Arduino IDE's 'avrdude.conf' file.
 
-The steps below will guide you through adding the device signature for the ATMega328. However, these changes must be undone in order to send sketches to the Arduino after burning the bootloader.
+The steps below will guide you through adding the device signature for the ATMega328. However, these changes must be undone in order to send sketches to the board after burning the bootloader.
 
 #####Step 1
 Quit the Arduino IDE if it is open.
