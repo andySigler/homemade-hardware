@@ -5,10 +5,10 @@ This is a redesign of the [Arduino Pro Mini](http://arduino.cc/en/Main/arduinoBo
 
 ###Features
 
-* Arduino Uno bootloader
-* 3.3 volts @ 16MHz
+* Bootloader: Arduino Pro Mini (3.3V, 8MHz) w/ ATmega328
+* Specs: 3.3 volts @ 8MHz
 * Dimension: 3.5cm x 2cm (1.37" x 0.8")
-* LED on pin 5 (not pin 13)
+* Onboard LED on Digital Pin 5 (not 13)
 * FTDI programming headers
 * Onboard reset button
 * Solder points for [coin cell battery holder](http://www.digikey.com/product-detail/en/BA2032/BA2032-ND/257744)
