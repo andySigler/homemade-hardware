@@ -1,7 +1,7 @@
 #Homemade SMD Microcontroller
 ##A clone of the Arduino-Pro-Mini
 
-This is a clone of the [Arduino Pro Mini](http://arduino.cc/en/Main/arduinoBoardProMini). It's design is constrained by the rapid prototyping tools and processes used to make it.
+This is a clone of the [Arduino Pro Mini](http://arduino.cc/en/Main/arduinoBoardProMini). It's design is constrained by the rapid prototyping tools and processes used to make it. Most notably, a micro-milling machine and DIY vias.
 
 ###Features
 
