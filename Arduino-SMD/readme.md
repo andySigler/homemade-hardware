@@ -1,7 +1,7 @@
 #Homemade Arduino SMD
 ##A clone of the Arduino-Pro-Mini
 
-This is my attempt at making an [Arduino Pro Mini](http://arduino.cc/en/Main/arduinoBoardProMini). It's designed to be fabricated using a micro-milling machine, and takes into account all the limitations of such a process.
+This is a clone of the [Arduino Pro Mini](http://arduino.cc/en/Main/arduinoBoardProMini) made with the tools at ITP. It's design is 
 
 ###Features
 
@@ -31,7 +31,9 @@ This is my attempt at making an [Arduino Pro Mini](http://arduino.cc/en/Main/ard
 
 ###Bootloading
 
-This build does not use the ATMega328p. Therefore, if for some reason you want to change the bootloader, you have to edit the `avrdude.conf` while bootloading. These steps will guide you through editing your `avrdude.conf` file. However, once done bootloading, these changes must be undone in order to send your sketches to the Arduino.
+If for some reason you want to change the bootloader, you have to edit the `avrdude.conf` before bootloading. This build uses the ATMega328, and not the more common ATMega328p, making the Arduino IDE unable to recognize the chip. This can be fixed by adding a new device signature to the Arduino IDE's 'avrdude.conf' file.
+
+The steps below will guide you through adding the device signature in order to bootload the ATMega328. However, once done bootloading, these changes must be undone in order to then send sketches to the Arduino.
 
 #####Step 1
 Quit the Arduino IDE if it is open.
@@ -40,12 +42,12 @@ Find where you've installed Arduino, right-click it, and select `Show Package Co
 #####Step 3
 Navigate all the way into `Contents/Resources/Java/hardware/tools/avr/etc` and you'll find the `avrdude.conf` file
 #####Step 4
-Open `avrdude.conf` in a text editor, and find the follow line for the ATMega328p:
+Open `avrdude.conf` in a text editor, and find the following line for the ATMega328p:
 ```
 signature   = 0x1e 0x95 0x0F;
 ```
 #####Step 5
-Comment that line out with an #, and add the new signature of the ATMega328. It should like like the following now:
+Comment that line out with an `#`, and add the new signature of the ATMega328. It should like like the following now:
 ```
 # signature   = 0x1e 0x95 0x0F;
 signature   = 0x1e 0x95 0x14;
