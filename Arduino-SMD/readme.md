@@ -1,14 +1,14 @@
 #Homemade SMD Microcontroller
 ##A clone of the Arduino-Pro-Mini
 
-This is a redesign of the [Arduino Pro Mini](http://arduino.cc/en/Main/arduinoBoardProMini). The design is constrained by rapid prototyping tools and processes used to make the PCB. The most notabe constraints are micro-milling machines and DIY vias.
+This is a redesign of the [Arduino Pro Mini](http://arduino.cc/en/Main/arduinoBoardProMini), which uses the Uno Bootloader. The design is constrained by rapid prototyping tools and processes used to make the PCB. The most notabe constraints are micro-milling machines and DIY vias.
 
 ![Board](https://github.com/andySigler/homemade-hardware/blob/master/Arduino-SMD/smd_shot.JPG)
 
 ###Features
 
-* Bootloader: Arduino Pro Mini (3.3V, 8MHz) w/ ATmega328
-* Specs: 3.3 volts @ 8MHz
+* Bootloader: Arduino Uno
+* Specs: 3.3 volts @ 16MHz
 * Dimension: 3.5cm x 2cm (1.37" x 0.8")
 * Onboard LED on Digital Pin 5 (not 13)
 * FTDI programming headers
