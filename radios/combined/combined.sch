@@ -1032,15 +1032,6 @@ These are standard SMD and PTH capacitors. Normally 10uF, 47uF, and 100uF in ele
 <smd name="REQ" x="-9.5" y="5" dx="3" dy="1.2" layer="1"/>
 <smd name="ANT" x="9.5" y="-5" dx="3" dy="1.2" layer="1"/>
 </package>
-<package name="915MHZ-ANTENNA">
-<smd name="ATTACH" x="3.48" y="0" dx="1" dy="1.8" layer="1"/>
-<smd name="SIGNAL" x="-3.48" y="0" dx="1" dy="1.8" layer="1"/>
-<wire x1="-4.2" y1="-1.1" x2="4.2" y2="-1.1" width="0.254" layer="21"/>
-<wire x1="4.2" y1="-1.1" x2="4.2" y2="1.1" width="0.254" layer="21"/>
-<wire x1="4.2" y1="1.1" x2="-4.2" y2="1.1" width="0.254" layer="21"/>
-<wire x1="-4.2" y1="1.1" x2="-4.2" y2="-1.1" width="0.254" layer="21"/>
-<wire x1="-2.5" y1="0" x2="-1.5" y2="0" width="0.254" layer="21"/>
-</package>
 <package name="SOT223">
 <wire x1="-3.25" y1="1.75" x2="3.25" y2="1.75" width="0.127" layer="21"/>
 <wire x1="3.25" y1="1.75" x2="3.25" y2="-1.75" width="0.127" layer="21"/>
@@ -1111,18 +1102,6 @@ These are standard SMD and PTH capacitors. Normally 10uF, 47uF, and 100uF in ele
 <wire x1="7.62" y1="10.16" x2="-7.62" y2="10.16" width="0.254" layer="94"/>
 <wire x1="-7.62" y1="10.16" x2="-7.62" y2="-5.08" width="0.254" layer="94"/>
 </symbol>
-<symbol name="ANTENNA">
-<wire x1="0" y1="0" x2="0" y2="15.24" width="0.254" layer="94"/>
-<wire x1="0" y1="15.24" x2="10.16" y2="15.24" width="0.254" layer="94"/>
-<wire x1="10.16" y1="15.24" x2="10.16" y2="5.08" width="0.254" layer="94"/>
-<pin name="SIGNAL" x="0" y="-5.08" length="middle" rot="R90"/>
-<wire x1="10.16" y1="5.08" x2="2.54" y2="5.08" width="0.254" layer="94"/>
-<wire x1="2.54" y1="5.08" x2="2.54" y2="12.7" width="0.254" layer="94"/>
-<wire x1="2.54" y1="12.7" x2="7.62" y2="12.7" width="0.254" layer="94"/>
-<wire x1="7.62" y1="12.7" x2="7.62" y2="7.62" width="0.254" layer="94"/>
-<wire x1="7.62" y1="7.62" x2="5.08" y2="7.62" width="0.254" layer="94"/>
-<wire x1="5.08" y1="7.62" x2="5.08" y2="10.16" width="0.254" layer="94"/>
-</symbol>
 <symbol name="REGULATOR">
 <pin name="IN" x="-10.16" y="0" length="middle"/>
 <pin name="OUT" x="12.7" y="0" length="middle" rot="R180"/>
@@ -1180,21 +1159,6 @@ These are standard SMD and PTH capacitors. Normally 10uF, 47uF, and 100uF in ele
 <connect gate="G$1" pin="MOSI" pad="MOSI"/>
 <connect gate="G$1" pin="REQ" pad="REQ"/>
 <connect gate="G$1" pin="SS" pad="SS"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="915MHZ-ANTENNA-SMD">
-<gates>
-<gate name="G$1" symbol="ANTENNA" x="0" y="-2.54"/>
-</gates>
-<devices>
-<device name="" package="915MHZ-ANTENNA">
-<connects>
-<connect gate="G$1" pin="SIGNAL" pad="SIGNAL"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -5598,7 +5562,6 @@ Standard 10-pin 0.1" header. Use with straight break away headers (SKU : PRT-001
 <part name="U$1" library="ITP_Lab" deviceset="RFM69" device=""/>
 <part name="GND1" library="SparkFun" deviceset="GND" device=""/>
 <part name="P+1" library="SparkFun" deviceset="3.3V" device="" value="VCC"/>
-<part name="U$2" library="ITP_Lab" deviceset="915MHZ-ANTENNA-SMD" device=""/>
 <part name="C3" library="SparkFun-Capacitors" deviceset="CAP_POL" device="1206" value="10uF"/>
 <part name="GND5" library="SparkFun" deviceset="GND" device=""/>
 <part name="GND6" library="SparkFun" deviceset="GND" device=""/>
@@ -5633,7 +5596,6 @@ Standard 10-pin 0.1" header. Use with straight break away headers (SKU : PRT-001
 <instance part="U$1" gate="G$1" x="195.58" y="205.74"/>
 <instance part="GND1" gate="1" x="195.58" y="187.96"/>
 <instance part="P+1" gate="G$1" x="195.58" y="228.6"/>
-<instance part="U$2" gate="G$1" x="218.44" y="208.28" rot="R270"/>
 <instance part="C3" gate="G$1" x="106.68" y="210.82" rot="R180"/>
 <instance part="GND5" gate="1" x="106.68" y="220.98" rot="R180"/>
 <instance part="GND6" gate="1" x="53.34" y="198.12"/>
@@ -5811,13 +5773,6 @@ Standard 10-pin 0.1" header. Use with straight break away headers (SKU : PRT-001
 <wire x1="99.06" y1="134.62" x2="111.76" y2="134.62" width="0.1524" layer="91"/>
 <label x="104.14" y="134.62" size="1.778" layer="95"/>
 <pinref part="JP2" gate="G$1" pin="5"/>
-</segment>
-</net>
-<net name="N$6" class="0">
-<segment>
-<pinref part="U$1" gate="G$1" pin="ANT"/>
-<pinref part="U$2" gate="G$1" pin="SIGNAL"/>
-<wire x1="213.36" y1="208.28" x2="208.28" y2="208.28" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$11" class="0">
