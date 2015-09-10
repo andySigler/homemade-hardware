@@ -44,39 +44,5 @@ Vias are filled with solid 24 gauge wire, bent at 90 degree angles on either sid
 * [Tactile Switch](http://www.digikey.com/product-detail/en/8-1437565-1/450-1941-ND/529677)
 * [Coin Cell Battery Holder](http://www.digikey.com/product-detail/en/BA2032/BA2032-ND/257744) (optional)
 
-###Burning a Bootloader
-
-This build does not use the ATMega328p, but instead the ATMega328 because that's what I had on me. This will make the Arduino IDE unable to recognize the chip when burning a bootloader, but you can be fix it by adding a new device signature to the Arduino IDE's 'avrdude.conf' file.
-
-The steps below will guide you through adding the device signature for the ATMega328. However, these changes must be undone in order to send sketches to the board after burning the bootloader.
-
-#####Step 1
-Quit the Arduino IDE if it is open.
-#####Step 2
-Find where you've installed Arduino, right-click it, and select `Show Package Contents`
-#####Step 3
-Navigate all the way into `Contents/Resources/Java/hardware/tools/avr/etc` and you'll find the `avrdude.conf` file
-#####Step 4
-Open `avrdude.conf` in a text editor, and find the following line for the ATMega328p:
-```
-signature   = 0x1e 0x95 0x0F;
-```
-#####Step 5
-Comment that line out with an `#`, and add the new signature of the ATMega328. It should like like the following now:
-```
-# signature   = 0x1e 0x95 0x0F;
-signature   = 0x1e 0x95 0x14;
-```
-#####Step 6
-Restart the Arduino IDE, and you should be able to bootload the board.
-#####Step 7
-When you're done, change the `avrdude.conf` file back to it's original settings so that you can send your sketches to the board:
-```
-signature   = 0x1e 0x95 0x0F;
-# signature   = 0x1e 0x95 0x14;
-```
-
-
-
 
 
