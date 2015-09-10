@@ -3,7 +3,7 @@
 
 This is a redesign of the [Arduino Pro Mini](http://arduino.cc/en/Main/arduinoBoardProMini), which uses the Uno Bootloader. The design is constrained by rapid prototyping tools and processes used to make the PCB. The most notabe constraints are micro-milling machines and DIY vias.
 
-![Board](https://github.com/andySigler/homemade-hardware/blob/master//boards/arduinosArduino-SMD/smd_shot.JPG)
+![Board](https://github.com/andySigler/homemade-hardware/blob/master/boards/arduinos/Arduino-SMD/smd_shot.JPG)
 
 ###Features
 
