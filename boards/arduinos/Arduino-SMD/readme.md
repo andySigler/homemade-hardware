@@ -34,7 +34,7 @@ Vias are filled with solid 24 gauge wire, bent at 90 degree angles on either sid
 
 ###Parts List
 
-* [ATMega328](http://www.digikey.com/product-detail/en/ATMEGA328-AUR/ATMEGA328-AURCT-ND/3440951) (this build does not use the more popular [ATMega328p](http://www.digikey.com/product-detail/en/ATMEGA328P-AUR/ATMEGA328P-AURCT-ND/3789455))
+* [ATMega328p](http://www.digikey.com/product-detail/en/ATMEGA328P-AUR/ATMEGA328P-AURCT-ND/3789455)
 * [3.3 Volt Regulator](http://www.digikey.com/product-detail/en/MIC5205-3.3YM5%20TR/576-1259-1-ND/771886)
 * [16 MHz Resonator](http://www.digikey.com/product-detail/en/PRQC16.00SR1010V00L/1253-1339-1-ND/4879394)
 * [10 uF Pol. Capacitor](http://www.digikey.com/product-detail/en/T491A106K006AT7280/399-10116-1-ND/3759233) x 2
