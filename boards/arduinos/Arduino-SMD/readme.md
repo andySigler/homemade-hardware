@@ -17,7 +17,7 @@ This is a redesign of the [Arduino Pro Mini](http://arduino.cc/en/Main/arduinoBo
 
 ###Pinouts
 
-![Pins](https://github.com/andySigler/homemade-hardware/blob/master/boards/arduinos/Arduino-SMD/pinout.png)
+![Pins](https://github.com/andySigler/homemade-hardware/blob/master/boards/arduinos/Arduino-SMD/arduino_smd_pinout.png)
 
 ###Building
 
