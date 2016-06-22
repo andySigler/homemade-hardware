@@ -923,7 +923,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <class number="1" name="vcc" width="0.254" drill="0">
 </class>
 </classes>
-<designrules name="LaenPCBOrder">
+<designrules name="default">
 <description language="de">&lt;b&gt;EAGLE Design Rules&lt;/b&gt;
 &lt;p&gt;
 Die Standard-Design-Rules sind so gewählt, dass sie für 
@@ -931,29 +931,33 @@ die meisten Anwendungen passen. Sollte ihre Platine
 besondere Anforderungen haben, treffen Sie die erforderlichen
 Einstellungen hier und speichern die Design Rules unter 
 einem neuen Namen ab.</description>
-<description language="en">&lt;b&gt;Laen's PCB Order Design Rules&lt;/b&gt;
+<description language="en">&lt;b&gt;EAGLE Design Rules&lt;/b&gt;
 &lt;p&gt;
-Please make sure your boards conform to these design rules.</description>
+The default Design Rules have been set to cover
+a wide range of applications. Your particular design
+may have different requirements, so please make the
+necessary adjustments and save your customized
+design rules under a new name.</description>
 <param name="layerSetup" value="(1*16)"/>
-<param name="mtCopper" value="0.0356mm 0.0356mm 0.0356mm 0.0356mm 0.0356mm 0.0356mm 0.0356mm 0.0356mm 0.0356mm 0.0356mm 0.0356mm 0.0356mm 0.0356mm 0.0356mm 0.0356mm 0.0356mm"/>
-<param name="mtIsolate" value="1.5011mm 0.1499mm 0.2007mm 0.1499mm 0.2007mm 0.1499mm 0.2007mm 0.1499mm 0.2007mm 0.1499mm 0.2007mm 0.1499mm 0.2007mm 0.1499mm 0.2007mm"/>
-<param name="mdWireWire" value="6mil"/>
-<param name="mdWirePad" value="6mil"/>
-<param name="mdWireVia" value="6mil"/>
-<param name="mdPadPad" value="6mil"/>
-<param name="mdPadVia" value="6mil"/>
-<param name="mdViaVia" value="6mil"/>
-<param name="mdSmdPad" value="6mil"/>
-<param name="mdSmdVia" value="6mil"/>
-<param name="mdSmdSmd" value="6mil"/>
+<param name="mtCopper" value="0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm"/>
+<param name="mtIsolate" value="1.5mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm"/>
+<param name="mdWireWire" value="8mil"/>
+<param name="mdWirePad" value="8mil"/>
+<param name="mdWireVia" value="8mil"/>
+<param name="mdPadPad" value="8mil"/>
+<param name="mdPadVia" value="8mil"/>
+<param name="mdViaVia" value="8mil"/>
+<param name="mdSmdPad" value="8mil"/>
+<param name="mdSmdVia" value="8mil"/>
+<param name="mdSmdSmd" value="8mil"/>
 <param name="mdViaViaSameLayer" value="8mil"/>
 <param name="mnLayersViaInSmd" value="2"/>
-<param name="mdCopperDimension" value="15mil"/>
-<param name="mdDrill" value="6mil"/>
+<param name="mdCopperDimension" value="40mil"/>
+<param name="mdDrill" value="8mil"/>
 <param name="mdSmdStop" value="0mil"/>
-<param name="msWidth" value="6mil"/>
-<param name="msDrill" value="13mil"/>
-<param name="msMicroVia" value="13mil"/>
+<param name="msWidth" value="10mil"/>
+<param name="msDrill" value="24mil"/>
+<param name="msMicroVia" value="9.99mm"/>
 <param name="msBlindViaRatio" value="0.5"/>
 <param name="rvPadTop" value="0.25"/>
 <param name="rvPadInner" value="0.25"/>
@@ -962,15 +966,15 @@ Please make sure your boards conform to these design rules.</description>
 <param name="rvViaInner" value="0.25"/>
 <param name="rvMicroViaOuter" value="0.25"/>
 <param name="rvMicroViaInner" value="0.25"/>
-<param name="rlMinPadTop" value="7mil"/>
+<param name="rlMinPadTop" value="10mil"/>
 <param name="rlMaxPadTop" value="20mil"/>
-<param name="rlMinPadInner" value="7mil"/>
+<param name="rlMinPadInner" value="10mil"/>
 <param name="rlMaxPadInner" value="20mil"/>
-<param name="rlMinPadBottom" value="7mil"/>
+<param name="rlMinPadBottom" value="10mil"/>
 <param name="rlMaxPadBottom" value="20mil"/>
-<param name="rlMinViaOuter" value="7mil"/>
+<param name="rlMinViaOuter" value="8mil"/>
 <param name="rlMaxViaOuter" value="20mil"/>
-<param name="rlMinViaInner" value="7mil"/>
+<param name="rlMinViaInner" value="8mil"/>
 <param name="rlMaxViaInner" value="20mil"/>
 <param name="rlMinMicroViaOuter" value="4mil"/>
 <param name="rlMaxMicroViaOuter" value="20mil"/>
@@ -983,8 +987,8 @@ Please make sure your boards conform to these design rules.</description>
 <param name="psElongationOffset" value="100"/>
 <param name="mvStopFrame" value="1"/>
 <param name="mvCreamFrame" value="0"/>
-<param name="mlMinStopFrame" value="3mil"/>
-<param name="mlMaxStopFrame" value="3mil"/>
+<param name="mlMinStopFrame" value="4mil"/>
+<param name="mlMaxStopFrame" value="4mil"/>
 <param name="mlMinCreamFrame" value="0mil"/>
 <param name="mlMaxCreamFrame" value="0mil"/>
 <param name="mlViaStopLimit" value="0mil"/>
@@ -1609,125 +1613,6 @@ Please make sure your boards conform to these design rules.</description>
 <wire x1="2.7432" y1="13.589" x2="2.5654" y2="13.7668" width="0.4064" layer="1"/>
 </signal>
 </signals>
-<errors>
-<approved hash="18,29,4de7cda7cec24e82"/>
-<approved hash="18,29,9908061c86141900"/>
-<approved hash="18,29,6a44f6ea76eeea40"/>
-<approved hash="18,29,8ec31a6d9a620ecc"/>
-<approved hash="18,29,329db9e139e0b29c"/>
-<approved hash="18,29,f789092f68bde2cb"/>
-<approved hash="18,29,9ed142399ff728e9"/>
-<approved hash="18,29,909fbe434ea83049"/>
-<approved hash="18,29,185af7dc89cf69ae"/>
-<approved hash="18,29,61745b7b0e9b4537"/>
-<approved hash="18,29,7db59ab3616f22c5"/>
-<approved hash="18,29,68f59703fa9c582b"/>
-<approved hash="18,29,a21b49dc2eb8983e"/>
-<approved hash="18,29,93857db59a81139a"/>
-<approved hash="18,29,e8ae6cdc89cf6b42"/>
-<approved hash="18,29,084de81e2815c846"/>
-<approved hash="18,29,0e9f05574572cfca"/>
-<approved hash="18,29,d3e2061c861453ea"/>
-<approved hash="18,29,e58e30b8beb06b86"/>
-<approved hash="18,29,45399a48b0406f31"/>
-<approved hash="18,29,084df62b76208846"/>
-<approved hash="18,29,109afe787e739091"/>
-<approved hash="18,29,221c546f51a8dc5b"/>
-<approved hash="18,29,91bb7879de01c53a"/>
-<approved hash="18,29,aa5a62246227aa59"/>
-<approved hash="18,29,2c95e41fe41c2c96"/>
-<approved hash="18,29,09b283cbf2c295d3"/>
-<approved hash="18,29,cfab453d662887a5"/>
-<approved hash="18,29,a0bcbea27fabbe77"/>
-<approved hash="18,29,a4fc1fb48fa9f79e"/>
-<approved hash="18,29,7f89017b01607f92"/>
-<approved hash="18,29,54258500d3fe52e3"/>
-<approved hash="18,29,02534d3530e47116"/>
-<approved hash="18,29,bc8d36e6626a670e"/>
-<approved hash="18,29,e5e91df363f69bec"/>
-<approved hash="18,29,5ef5ae44caf226dc"/>
-<approved hash="18,29,2da2a203dc919070"/>
-<approved hash="18,29,b05b69c02fe62229"/>
-<approved hash="18,29,af02687d6849d731"/>
-<approved hash="18,29,36a594528b34e2a2"/>
-<approved hash="18,29,7bf855a838824d0e"/>
-<approved hash="18,29,91fc72c504c9b8e0"/>
-<approved hash="18,29,769077250853df91"/>
-<approved hash="18,29,1502d7c1fd41e9f5"/>
-<approved hash="18,29,9390dc6c80d44d32"/>
-<approved hash="18,29,2628217a208a27d8"/>
-<approved hash="18,29,a982d6f88d8240e6"/>
-<approved hash="18,29,580a4f084f3a5838"/>
-<approved hash="18,29,d42c657245ca329d"/>
-<approved hash="18,29,0df386f00c5b01a9"/>
-<approved hash="18,29,3fefd06d1b6cf4ee"/>
-<approved hash="18,29,d0963d0c88096593"/>
-<approved hash="18,29,f856ee2e6e2e7856"/>
-<approved hash="18,29,365cae13092d02ef"/>
-<approved hash="18,29,be4521bf94bf0b45"/>
-<approved hash="18,29,78e9f232638f812f"/>
-<approved hash="18,29,fa78f26ef2353a33"/>
-<approved hash="18,29,2e50152ef146b6dd"/>
-<approved hash="18,29,2e55b84cc75d7c1d"/>
-<approved hash="18,29,26e221ec20182716"/>
-<approved hash="18,29,c007900611f0f010"/>
-<approved hash="18,29,16b113d113c116a1"/>
-<approved hash="18,29,6b9abd749b074f6a"/>
-<approved hash="18,29,fa8ead9190c0d745"/>
-<approved hash="18,29,2b82f80b4e3a611e"/>
-<approved hash="18,29,baf23e1bb4eb2822"/>
-<approved hash="18,29,f6aad328ec457033"/>
-<approved hash="18,29,d40c8d218b866b5f"/>
-<approved hash="18,29,e81fbf3b934c1867"/>
-<approved hash="18,29,a478e22c58459200"/>
-<approved hash="18,29,be0b071708d9b1c5"/>
-<approved hash="18,29,fc4153ee713e2d09"/>
-<approved hash="18,29,a5ef1b4867d5fdd6"/>
-<approved hash="18,29,37f78f55b5cdca77"/>
-<approved hash="18,29,0fcb15b395b38fcb"/>
-<approved hash="18,29,151d8608cedadd9a"/>
-<approved hash="18,29,fa8746c039f58d82"/>
-<approved hash="18,29,53551ce32e025cba"/>
-<approved hash="18,29,0cdb49183c0451c7"/>
-<approved hash="18,29,952de7d74d3a442f"/>
-<approved hash="18,29,4cd524e124462180"/>
-<approved hash="18,29,245ec9e849efa459"/>
-<approved hash="18,29,1a13ef72f8e86e7e"/>
-<approved hash="18,29,ca8b4743b3155d2a"/>
-<approved hash="18,29,c0ef813bf77f38af"/>
-<approved hash="18,29,e3ba47f3e7b9a9ad"/>
-<approved hash="18,29,3ba893e77b92af23"/>
-<approved hash="18,29,d36c5bd81dc89107"/>
-<approved hash="18,29,8644dce026406324"/>
-<approved hash="18,29,4b17c22736759699"/>
-<approved hash="18,29,68cec63efa8c2e83"/>
-<approved hash="18,29,0d69352e76832663"/>
-<approved hash="18,29,354e2faf9a311d59"/>
-<approved hash="18,29,9a320f700f7c9a3e"/>
-<approved hash="18,29,ecab40a217c7bbcf"/>
-<approved hash="18,29,03331e014c03df8e"/>
-<approved hash="18,29,8071144836344037"/>
-<approved hash="18,29,21a9bafc8826f6f0"/>
-<approved hash="18,29,dcd06ae835de6f31"/>
-<approved hash="18,29,614af1d2f9a6a265"/>
-<approved hash="18,29,6cd8e82877a30b51"/>
-<approved hash="18,29,9fd9139910ea9caa"/>
-<approved hash="18,30,83141387a8e95f5e"/>
-<approved hash="18,30,49e3359a7c618ee5"/>
-<approved hash="18,30,b59ebced1658937c"/>
-<approved hash="18,30,98cfc537a5c46798"/>
-<approved hash="18,30,dcad2cc67f5864f0"/>
-<approved hash="18,30,8da75d77fdf549b5"/>
-<approved hash="18,30,63802f637b6ef4e6"/>
-<approved hash="18,30,8583d17480794d86"/>
-<approved hash="18,30,bde52f2a5d318856"/>
-<approved hash="18,30,2acdd5edd9cf523c"/>
-<approved hash="18,30,d09b430d4002d79a"/>
-<approved hash="18,30,9f4783d62abee653"/>
-<approved hash="18,30,564c6931749c2ba5"/>
-<approved hash="18,30,715795f1730f2543"/>
-<approved hash="18,30,65a676c5489f0705"/>
-</errors>
 </board>
 </drawing>
 <compatibility>
