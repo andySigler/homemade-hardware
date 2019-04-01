@@ -748,7 +748,7 @@ Vin</text>
 <busses>
 </busses>
 <nets>
-<net name="RESET" class="0">
+<net name="TINY_RESET" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="RESET_(PB5)"/>
 <pinref part="U$3" gate="G$1" pin="5"/>
@@ -763,28 +763,28 @@ Vin</text>
 <junction x="104.14" y="43.18"/>
 </segment>
 </net>
-<net name="N$1" class="0">
+<net name="MOSI" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="D0_MOSI_(PB0)"/>
 <wire x1="101.6" y1="30.48" x2="124.46" y2="30.48" width="0.1524" layer="91"/>
 <pinref part="U$3" gate="G$1" pin="4"/>
 </segment>
 </net>
-<net name="N$2" class="0">
+<net name="MISO" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="D1_MISO_(PB1)"/>
 <pinref part="U$3" gate="G$1" pin="3"/>
 <wire x1="101.6" y1="33.02" x2="124.46" y2="33.02" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$3" class="0">
+<net name="SCK" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="A1/D2_SCK_(PB2)"/>
 <pinref part="U$3" gate="G$1" pin="2"/>
 <wire x1="124.46" y1="35.56" x2="101.6" y2="35.56" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$4" class="0">
+<net name="ARDUINO_RESET" class="0">
 <segment>
 <pinref part="U$2" gate="G$1" pin="6"/>
 <wire x1="30.48" y1="35.56" x2="35.56" y2="35.56" width="0.1524" layer="91"/>

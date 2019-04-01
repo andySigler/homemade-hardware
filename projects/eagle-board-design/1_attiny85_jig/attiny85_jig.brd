@@ -399,29 +399,29 @@
 <element name="U$3" library="homemade-hardware" package="HEADER-7" value="HEADER-7" x="52.84" y="21.72" locked="yes" smashed="yes" rot="R180"/>
 </elements>
 <signals>
-<signal name="RESET">
+<signal name="TINY_RESET">
 <contactref element="U$1" pad="1"/>
 <contactref element="U$3" pad="5"/>
 <contactref element="R1" pad="1"/>
 <wire x1="23.345" y1="17.27" x2="52.84" y2="11.56" width="0" layer="19" extent="1-1"/>
 <wire x1="18.49" y1="17.05" x2="23.345" y2="17.27" width="0" layer="19" extent="1-1"/>
 </signal>
-<signal name="N$1">
+<signal name="MOSI">
 <contactref element="U$1" pad="5"/>
 <contactref element="U$3" pad="4"/>
 <wire x1="34.235" y1="9.65" x2="52.84" y2="14.1" width="0" layer="19" extent="1-1"/>
 </signal>
-<signal name="N$2">
+<signal name="MISO">
 <contactref element="U$1" pad="6"/>
 <contactref element="U$3" pad="3"/>
 <wire x1="34.235" y1="12.19" x2="52.84" y2="16.64" width="0" layer="19" extent="1-1"/>
 </signal>
-<signal name="N$3">
+<signal name="SCK">
 <contactref element="U$1" pad="7"/>
 <contactref element="U$3" pad="2"/>
 <wire x1="34.235" y1="14.73" x2="52.84" y2="19.18" width="0" layer="19" extent="1-1"/>
 </signal>
-<signal name="N$4">
+<signal name="ARDUINO_RESET">
 <contactref element="U$2" pad="6"/>
 <contactref element="C2" pad="1"/>
 <wire x1="4.55" y1="15.08" x2="8.75" y2="16.12" width="0" layer="19" extent="1-1"/>
