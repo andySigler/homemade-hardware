@@ -1,3 +1,7 @@
+*.DS_Store
+
+# Eagle backup files
+*.s##
 *.s#1
 *.s#2
 *.s#3
@@ -7,6 +11,7 @@
 *.s#7
 *.s#8
 *.s#9
+*.b##
 *.b#1
 *.b#2
 *.b#3
@@ -16,3 +21,22 @@
 *.b#7
 *.b#8
 *.b#9
+*.l##
+*.l#1
+*.l#2
+*.l#3
+*.l#4
+*.l#5
+*.l#6
+*.l#7
+*.l#8
+*.l#9
+
+# Bantam files
+*.btm
+
+# Design files not sharing
+*marquee_h.brd
+*marquee-h.brd
+*Marquee_H.brd
+*Marquee-H.brd
