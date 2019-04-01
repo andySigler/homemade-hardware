@@ -7,7 +7,7 @@
 <setting keepoldvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="1" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
@@ -3685,20 +3685,20 @@ For boards designed to be plugged directly into a USB slot. If possible, ensure 
 <wire x1="3.81" y1="2.8575" x2="3.81" y2="4.7625" width="0.0762" layer="94" curve="112.619865"/>
 </symbol>
 <symbol name="ATTINY85">
-<wire x1="12.7" y1="-7.62" x2="-12.7" y2="-7.62" width="0.254" layer="94"/>
-<wire x1="-12.7" y1="-7.62" x2="-12.7" y2="10.16" width="0.254" layer="94"/>
-<wire x1="-12.7" y1="10.16" x2="12.7" y2="10.16" width="0.254" layer="94"/>
+<wire x1="12.7" y1="-7.62" x2="-15.24" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="-15.24" y1="-7.62" x2="-15.24" y2="10.16" width="0.254" layer="94"/>
+<wire x1="-15.24" y1="10.16" x2="12.7" y2="10.16" width="0.254" layer="94"/>
 <wire x1="12.7" y1="10.16" x2="12.7" y2="-7.62" width="0.254" layer="94"/>
-<text x="-12.7" y="10.922" size="1.778" layer="95">&gt;NAME</text>
-<text x="-12.7" y="-10.16" size="1.778" layer="96">&gt;VALUE</text>
+<text x="-15.24" y="10.922" size="1.778" layer="95">&gt;NAME</text>
+<text x="-15.24" y="-10.16" size="1.778" layer="96">&gt;VALUE</text>
 <pin name="A2/D4_(PB4)" x="17.78" y="5.08" length="middle" rot="R180"/>
 <pin name="A3/D3_(PB3)" x="17.78" y="2.54" length="middle" rot="R180"/>
 <pin name="RESET_(PB5)" x="17.78" y="7.62" length="middle" rot="R180"/>
 <pin name="A1/D2_SCK_(PB2)" x="17.78" y="0" length="middle" rot="R180"/>
 <pin name="D1_MISO_(PB1)" x="17.78" y="-2.54" length="middle" rot="R180"/>
 <pin name="D0_MOSI_(PB0)" x="17.78" y="-5.08" length="middle" rot="R180"/>
-<pin name="VCC" x="-17.78" y="7.62" length="middle" direction="pwr"/>
-<pin name="GND" x="-17.78" y="5.08" length="middle" direction="pwr"/>
+<pin name="VCC" x="-20.32" y="7.62" length="middle" direction="pwr"/>
+<pin name="GND" x="-20.32" y="-5.08" length="middle" direction="pwr"/>
 </symbol>
 <symbol name="ATTINY84">
 <wire x1="-2.54" y1="17.78" x2="45.72" y2="17.78" width="0.254" layer="94"/>
