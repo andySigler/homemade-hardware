@@ -219,10 +219,10 @@
 <wire x1="-3.15" y1="-2" x2="-3.15" y2="-4.5" width="0.127" layer="21"/>
 <wire x1="-3.15" y1="-4.5" x2="-4" y2="-4.5" width="0.127" layer="21"/>
 <wire x1="-4" y1="-4.5" x2="-4" y2="-0.5" width="0.127" layer="21"/>
-<smd name="1" x="1" y="-3.7" dx="1" dy="4.6" layer="1"/>
-<smd name="2" x="-1" y="-3.7" dx="1" dy="4.6" layer="1"/>
-<smd name="NC1" x="-3.4" y="1.5" dx="3.4" dy="1.6" layer="1" rot="R90"/>
-<smd name="NC2" x="3.4" y="1.5" dx="3.4" dy="1.6" layer="1" rot="R90"/>
+<smd name="1" x="1" y="-3.825" dx="1" dy="4.35" layer="1"/>
+<smd name="2" x="-1" y="-3.825" dx="1" dy="4.35" layer="1"/>
+<smd name="NC1" x="-3.4" y="1.625" dx="3.15" dy="1.6" layer="1" rot="R90"/>
+<smd name="NC2" x="3.4" y="1.625" dx="3.15" dy="1.6" layer="1" rot="R90"/>
 <text x="-2.54" y="3.81" size="1.27" layer="25" font="vector">&gt;Name</text>
 <text x="-2.54" y="-7.62" size="1.27" layer="27" font="vector">&gt;Value</text>
 <text x="2.286" y="-6.096" size="1.4224" layer="21" ratio="12">+</text>
@@ -237,6 +237,8 @@
 <wire x1="0" y1="5.08" x2="0" y2="1.27" width="0.508" layer="94"/>
 <wire x1="-1.905" y1="-3.175" x2="1.905" y2="-3.175" width="0.508" layer="94"/>
 <wire x1="-1.905" y1="3.175" x2="1.905" y2="3.175" width="0.508" layer="94"/>
+<text x="2.54" y="8.89" size="1.27" layer="95">&gt;NAME</text>
+<text x="2.54" y="-10.16" size="1.27" layer="96">&gt;VALUE</text>
 </symbol>
 </symbols>
 <devicesets>
