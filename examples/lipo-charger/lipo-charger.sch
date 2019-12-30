@@ -291,15 +291,34 @@ Source: http://www.osram.convergy.de/ ... lb_r99a.pdf</description>
 <description>Card-edge USB A connector.
 
 For boards designed to be plugged directly into a USB slot. If possible, ensure that your PCB is about 2.4mm thick to fit snugly.</description>
-<wire x1="-5" y1="6" x2="3.7" y2="6" width="0.127" layer="51"/>
-<wire x1="3.7" y1="6" x2="3.7" y2="-6" width="0.127" layer="51"/>
-<wire x1="3.7" y1="-6" x2="-5" y2="-6" width="0.127" layer="51"/>
-<wire x1="-5" y1="-6" x2="-5" y2="6" width="0.127" layer="51"/>
+<wire x1="-5" y1="6" x2="6" y2="6" width="0.127" layer="51" style="shortdash"/>
+<wire x1="6" y1="-6" x2="-5" y2="-6" width="0.127" layer="51" style="shortdash"/>
+<wire x1="-5" y1="-6" x2="-5" y2="6" width="0.127" layer="51" style="shortdash"/>
 <smd name="5V" x="-0.2" y="-3.5" dx="7.5" dy="1.5" layer="1"/>
 <smd name="GND" x="-0.2" y="3.5" dx="7.5" dy="1.5" layer="1"/>
 <text x="-4.318" y="-2.032" size="0.6096" layer="48" rot="R90">edge of PCB</text>
 <text x="2.032" y="5.842" size="0.6096" layer="48" rot="R180">edge of PCB</text>
 <text x="1.778" y="-5.08" size="0.6096" layer="48" rot="R180">edge of PCB</text>
+<polygon width="0.127" layer="41">
+<vertex x="6" y="4.5"/>
+<vertex x="6" y="6"/>
+<vertex x="-5" y="6"/>
+<vertex x="-5" y="-6"/>
+<vertex x="6" y="-6"/>
+<vertex x="6" y="-4.5"/>
+<vertex x="-4.25" y="-4.5"/>
+<vertex x="-4.25" y="-2.5"/>
+<vertex x="6" y="-2.5"/>
+<vertex x="6" y="2.5"/>
+<vertex x="-4.25" y="2.5"/>
+<vertex x="-4.25" y="4.5"/>
+</polygon>
+<polygon width="0.127" layer="42">
+<vertex x="6" y="-6"/>
+<vertex x="6" y="6"/>
+<vertex x="-5" y="6"/>
+<vertex x="-5" y="-6"/>
+</polygon>
 </package>
 <package name="0603-CAP">
 <wire x1="-1.473" y1="0.983" x2="1.473" y2="0.983" width="0.0508" layer="39"/>
@@ -407,11 +426,6 @@ For boards designed to be plugged directly into a USB slot. If possible, ensure 
 <text x="2.54" y="8.89" size="1.27" layer="95">&gt;NAME</text>
 <text x="2.54" y="-10.16" size="1.27" layer="96">&gt;VALUE</text>
 </symbol>
-<symbol name="GND">
-<wire x1="-1.905" y1="0" x2="1.905" y2="0" width="0.254" layer="94"/>
-<pin name="GND" x="0" y="2.54" visible="off" length="short" direction="sup" rot="R270"/>
-<text x="-2.54" y="-2.54" size="1.778" layer="96">&gt;VALUE</text>
-</symbol>
 <symbol name="USB_POWER">
 <wire x1="2.54" y1="3.81" x2="-2.54" y2="3.81" width="0.254" layer="94"/>
 <wire x1="-2.54" y1="3.81" x2="-2.54" y2="-6.35" width="0.254" layer="94"/>
@@ -421,6 +435,11 @@ For boards designed to be plugged directly into a USB slot. If possible, ensure 
 <text x="1.27" y="-5.08" size="2.54" layer="94" rot="R90">USB</text>
 <text x="-2.54" y="3.81" size="1.27" layer="95">&gt;NAME</text>
 <text x="-2.54" y="-7.62" size="1.27" layer="96">&gt;VALUE</text>
+</symbol>
+<symbol name="GND">
+<wire x1="-1.905" y1="0" x2="1.905" y2="0" width="0.254" layer="94"/>
+<pin name="GND" x="0" y="2.54" visible="off" length="short" direction="sup" rot="R270"/>
+<text x="0" y="-1.905" size="1.27" layer="94" align="bottom-center">GND</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -498,19 +517,6 @@ Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LE
 </device>
 </devices>
 </deviceset>
-<deviceset name="GND" prefix="GND">
-<description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
-<gates>
-<gate name="1" symbol="GND" x="0" y="0"/>
-</gates>
-<devices>
-<device name="">
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
 <deviceset name="CONN_USB_PCB_POWER">
 <gates>
 <gate name="G$1" symbol="USB_POWER" x="0" y="5.08"/>
@@ -579,6 +585,19 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 </device>
 </devices>
 </deviceset>
+<deviceset name="SYMBOL_GND" prefix="GND">
+<description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
+<gates>
+<gate name="1" symbol="GND" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
 </devicesets>
 </library>
 </libraries>
@@ -593,12 +612,6 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 <parts>
 <part name="IC1" library="homemade-hardware" deviceset="IC_LIPO_CHARGER" device=""/>
 <part name="U$1" library="homemade-hardware" deviceset="CONN_BATTERY" device="-LIPO-HORIZ"/>
-<part name="GND7" library="homemade-hardware" deviceset="GND" device=""/>
-<part name="GND8" library="homemade-hardware" deviceset="GND" device=""/>
-<part name="GND9" library="homemade-hardware" deviceset="GND" device=""/>
-<part name="GND10" library="homemade-hardware" deviceset="GND" device=""/>
-<part name="GND11" library="homemade-hardware" deviceset="GND" device=""/>
-<part name="GND12" library="homemade-hardware" deviceset="GND" device=""/>
 <part name="U$2" library="homemade-hardware" deviceset="CONN_USB_PCB_POWER" device=""/>
 <part name="LED1" library="homemade-hardware" deviceset="LED" device="-0805" value="Red"/>
 <part name="LED2" library="homemade-hardware" deviceset="LED" device="-0805" value="Blue"/>
@@ -607,11 +620,17 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 <part name="R2" library="homemade-hardware" deviceset="COMPONENT_RESISTOR" device="-0805" value="150"/>
 <part name="R1" library="homemade-hardware" deviceset="COMPONENT_RESISTOR" device="-0805" value="150"/>
 <part name="R3" library="homemade-hardware" deviceset="COMPONENT_RESISTOR" device="-0805" value="10k"/>
+<part name="GND1" library="homemade-hardware" deviceset="SYMBOL_GND" device=""/>
+<part name="GND2" library="homemade-hardware" deviceset="SYMBOL_GND" device=""/>
+<part name="GND3" library="homemade-hardware" deviceset="SYMBOL_GND" device=""/>
+<part name="GND4" library="homemade-hardware" deviceset="SYMBOL_GND" device=""/>
+<part name="GND5" library="homemade-hardware" deviceset="SYMBOL_GND" device=""/>
+<part name="GND6" library="homemade-hardware" deviceset="SYMBOL_GND" device=""/>
 </parts>
 <sheets>
 <sheet>
 <plain>
-<text x="154.94" y="25.4" size="1.778" layer="150">10k    =   100mA
+<text x="149.86" y="15.24" size="1.778" layer="150">10k    =   100mA
 4.7k   =   200mA
 2k      =   500mA
 1k      =   1000mA</text>
@@ -624,29 +643,9 @@ done = HIGH</text>
 </instance>
 <instance part="U$1" gate="G$1" x="180.34" y="40.64" smashed="yes">
 <attribute name="NAME" x="182.88" y="49.53" size="1.27" layer="95"/>
-<attribute name="VALUE" x="182.88" y="30.48" size="1.27" layer="96"/>
 </instance>
-<instance part="GND7" gate="1" x="71.12" y="17.78" smashed="yes">
-<attribute name="VALUE" x="68.58" y="15.24" size="1.778" layer="96"/>
-</instance>
-<instance part="GND8" gate="1" x="58.42" y="48.26" smashed="yes">
-<attribute name="VALUE" x="55.88" y="45.72" size="1.778" layer="96"/>
-</instance>
-<instance part="GND9" gate="1" x="144.78" y="17.78" smashed="yes">
-<attribute name="VALUE" x="142.24" y="15.24" size="1.778" layer="96"/>
-</instance>
-<instance part="GND10" gate="1" x="180.34" y="17.78" smashed="yes">
-<attribute name="VALUE" x="177.8" y="15.24" size="1.778" layer="96"/>
-</instance>
-<instance part="GND11" gate="1" x="99.06" y="40.64" smashed="yes">
-<attribute name="VALUE" x="96.52" y="38.1" size="1.778" layer="96"/>
-</instance>
-<instance part="GND12" gate="1" x="109.22" y="40.64" smashed="yes">
-<attribute name="VALUE" x="106.68" y="38.1" size="1.778" layer="96"/>
-</instance>
-<instance part="U$2" gate="G$1" x="53.34" y="60.96" smashed="yes" rot="MR0">
-<attribute name="NAME" x="55.88" y="64.77" size="1.27" layer="95" rot="MR0"/>
-<attribute name="VALUE" x="55.88" y="53.34" size="1.27" layer="96" rot="MR0"/>
+<instance part="U$2" gate="G$1" x="71.12" y="60.96" smashed="yes" rot="MR0">
+<attribute name="NAME" x="73.66" y="64.77" size="1.27" layer="95" rot="MR0"/>
 </instance>
 <instance part="LED1" gate="G$1" x="86.36" y="53.34" smashed="yes">
 <attribute name="NAME" x="89.916" y="48.768" size="1.778" layer="95" rot="R90"/>
@@ -676,6 +675,12 @@ done = HIGH</text>
 <attribute name="NAME" x="150.9014" y="29.21" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="155.702" y="29.21" size="1.778" layer="96" rot="R90"/>
 </instance>
+<instance part="GND1" gate="1" x="76.2" y="48.26" smashed="yes"/>
+<instance part="GND2" gate="1" x="71.12" y="17.78" smashed="yes"/>
+<instance part="GND3" gate="1" x="99.06" y="40.64" smashed="yes"/>
+<instance part="GND4" gate="1" x="109.22" y="40.64" smashed="yes"/>
+<instance part="GND5" gate="1" x="144.78" y="17.78" smashed="yes"/>
+<instance part="GND6" gate="1" x="180.34" y="17.78" smashed="yes"/>
 </instances>
 <busses>
 </busses>
@@ -726,7 +731,7 @@ done = HIGH</text>
 <net name="5V" class="0">
 <segment>
 <wire x1="86.36" y1="58.42" x2="86.36" y2="55.88" width="0.1524" layer="91"/>
-<wire x1="58.42" y1="58.42" x2="86.36" y2="58.42" width="0.1524" layer="91"/>
+<wire x1="76.2" y1="58.42" x2="86.36" y2="58.42" width="0.1524" layer="91"/>
 <junction x="86.36" y="58.42"/>
 <wire x1="86.36" y1="58.42" x2="99.06" y2="58.42" width="0.1524" layer="91"/>
 <wire x1="99.06" y1="58.42" x2="109.22" y2="58.42" width="0.1524" layer="91"/>
@@ -745,9 +750,24 @@ done = HIGH</text>
 </net>
 <net name="GND" class="0">
 <segment>
-<wire x1="180.34" y1="27.94" x2="180.34" y2="20.32" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="G$1" pin="-"/>
-<pinref part="GND10" gate="1" pin="GND"/>
+<wire x1="76.2" y1="55.88" x2="76.2" y2="50.8" width="0.1524" layer="91"/>
+<pinref part="U$2" gate="G$1" pin="GND"/>
+<pinref part="GND1" gate="1" pin="GND"/>
+</segment>
+<segment>
+<wire x1="71.12" y1="22.86" x2="71.12" y2="20.32" width="0.1524" layer="91"/>
+<pinref part="LED2" gate="G$1" pin="C"/>
+<pinref part="GND2" gate="1" pin="GND"/>
+</segment>
+<segment>
+<wire x1="99.06" y1="45.72" x2="99.06" y2="43.18" width="0.1524" layer="91"/>
+<pinref part="C1" gate="G$1" pin="2"/>
+<pinref part="GND3" gate="1" pin="GND"/>
+</segment>
+<segment>
+<wire x1="109.22" y1="45.72" x2="109.22" y2="43.18" width="0.1524" layer="91"/>
+<pinref part="C2" gate="G$1" pin="2"/>
+<pinref part="GND4" gate="1" pin="GND"/>
 </segment>
 <segment>
 <wire x1="144.78" y1="33.02" x2="144.78" y2="27.94" width="0.1524" layer="91"/>
@@ -755,28 +775,13 @@ done = HIGH</text>
 <wire x1="152.4" y1="27.94" x2="144.78" y2="27.94" width="0.1524" layer="91"/>
 <junction x="144.78" y="27.94"/>
 <pinref part="IC1" gate="G$1" pin="GND"/>
-<pinref part="GND9" gate="1" pin="GND"/>
 <pinref part="R3" gate="G$1" pin="1"/>
+<pinref part="GND5" gate="1" pin="GND"/>
 </segment>
 <segment>
-<wire x1="71.12" y1="22.86" x2="71.12" y2="20.32" width="0.1524" layer="91"/>
-<pinref part="GND7" gate="1" pin="GND"/>
-<pinref part="LED2" gate="G$1" pin="C"/>
-</segment>
-<segment>
-<wire x1="58.42" y1="55.88" x2="58.42" y2="50.8" width="0.1524" layer="91"/>
-<pinref part="GND8" gate="1" pin="GND"/>
-<pinref part="U$2" gate="G$1" pin="GND"/>
-</segment>
-<segment>
-<wire x1="99.06" y1="45.72" x2="99.06" y2="43.18" width="0.1524" layer="91"/>
-<pinref part="GND11" gate="1" pin="GND"/>
-<pinref part="C1" gate="G$1" pin="2"/>
-</segment>
-<segment>
-<wire x1="109.22" y1="45.72" x2="109.22" y2="43.18" width="0.1524" layer="91"/>
-<pinref part="GND12" gate="1" pin="GND"/>
-<pinref part="C2" gate="G$1" pin="2"/>
+<wire x1="180.34" y1="27.94" x2="180.34" y2="20.32" width="0.1524" layer="91"/>
+<pinref part="U$1" gate="G$1" pin="-"/>
+<pinref part="GND6" gate="1" pin="GND"/>
 </segment>
 </net>
 </nets>

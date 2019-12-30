@@ -7,9 +7,9 @@
 <setting keepoldvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
 <layers>
-<layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
+<layer number="1" name="Top" color="4" fill="1" visible="no" active="yes"/>
 <layer number="2" name="Route2" color="16" fill="1" visible="no" active="no"/>
 <layer number="3" name="Route3" color="17" fill="1" visible="no" active="no"/>
 <layer number="4" name="Route4" color="18" fill="1" visible="no" active="no"/>
@@ -50,7 +50,7 @@
 <layer number="39" name="tKeepout" color="4" fill="11" visible="yes" active="yes"/>
 <layer number="40" name="bKeepout" color="1" fill="11" visible="yes" active="yes"/>
 <layer number="41" name="tRestrict" color="4" fill="10" visible="yes" active="yes"/>
-<layer number="42" name="bRestrict" color="1" fill="10" visible="yes" active="yes"/>
+<layer number="42" name="bRestrict" color="1" fill="10" visible="no" active="yes"/>
 <layer number="43" name="vRestrict" color="2" fill="10" visible="yes" active="yes"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="45" name="Holes" color="7" fill="1" visible="yes" active="yes"/>
@@ -1492,17 +1492,44 @@
 <description>Card-edge USB A connector.
 
 For boards designed to be plugged directly into a USB slot. If possible, ensure that your PCB is about 2.4mm thick to fit snugly.</description>
-<wire x1="-5" y1="6" x2="3.7" y2="6" width="0.127" layer="51"/>
-<wire x1="3.7" y1="6" x2="3.7" y2="-6" width="0.127" layer="51"/>
-<wire x1="3.7" y1="-6" x2="-5" y2="-6" width="0.127" layer="51"/>
-<wire x1="-5" y1="-6" x2="-5" y2="6" width="0.127" layer="51"/>
 <smd name="5V" x="-0.2" y="-3.5" dx="7.5" dy="1.5" layer="1"/>
 <smd name="GND" x="-0.2" y="3.5" dx="7.5" dy="1.5" layer="1"/>
 <smd name="USB_M" x="0.3" y="-1" dx="6.5" dy="1" layer="1"/>
 <smd name="USB_P" x="0.3" y="1" dx="6.5" dy="1" layer="1"/>
+<wire x1="-5" y1="6" x2="6" y2="6" width="0.127" layer="51" style="shortdash"/>
+<wire x1="6" y1="-6" x2="-5" y2="-6" width="0.127" layer="51" style="shortdash"/>
+<wire x1="-5" y1="-6" x2="-5" y2="6" width="0.127" layer="51" style="shortdash"/>
 <text x="-4.318" y="-2.032" size="0.6096" layer="48" rot="R90">edge of PCB</text>
 <text x="2.032" y="5.842" size="0.6096" layer="48" rot="R180">edge of PCB</text>
 <text x="1.778" y="-5.08" size="0.6096" layer="48" rot="R180">edge of PCB</text>
+<polygon width="0.127" layer="41">
+<vertex x="6" y="4.5"/>
+<vertex x="6" y="6"/>
+<vertex x="-5" y="6"/>
+<vertex x="-5" y="-6"/>
+<vertex x="6" y="-6"/>
+<vertex x="6" y="-4.5"/>
+<vertex x="-4.25" y="-4.5"/>
+<vertex x="-4.25" y="-2.5"/>
+<vertex x="6" y="-2.5"/>
+<vertex x="6" y="-1.6"/>
+<vertex x="-3.1" y="-1.6"/>
+<vertex x="-3.1" y="-0.4"/>
+<vertex x="6" y="-0.4"/>
+<vertex x="6" y="0.4"/>
+<vertex x="-3.1" y="0.4"/>
+<vertex x="-3.1" y="1.6"/>
+<vertex x="6" y="1.6"/>
+<vertex x="6" y="2.5"/>
+<vertex x="-4.25" y="2.5"/>
+<vertex x="-4.25" y="4.5"/>
+</polygon>
+<polygon width="0.127" layer="42">
+<vertex x="6" y="-6"/>
+<vertex x="6" y="6"/>
+<vertex x="-5" y="6"/>
+<vertex x="-5" y="-6"/>
+</polygon>
 </package>
 <package name="CHIP-LED0805" urn="urn:adsk.eagle:footprint:6239911/1">
 <description>&lt;b&gt;Hyper CHIPLED Hyper-Bright LED&lt;/b&gt;&lt;p&gt;
@@ -1525,15 +1552,34 @@ Source: http://www.osram.convergy.de/ ... lb_r99a.pdf</description>
 <description>Card-edge USB A connector.
 
 For boards designed to be plugged directly into a USB slot. If possible, ensure that your PCB is about 2.4mm thick to fit snugly.</description>
-<wire x1="-5" y1="6" x2="3.7" y2="6" width="0.127" layer="51"/>
-<wire x1="3.7" y1="6" x2="3.7" y2="-6" width="0.127" layer="51"/>
-<wire x1="3.7" y1="-6" x2="-5" y2="-6" width="0.127" layer="51"/>
-<wire x1="-5" y1="-6" x2="-5" y2="6" width="0.127" layer="51"/>
+<wire x1="-5" y1="6" x2="6" y2="6" width="0.127" layer="51" style="shortdash"/>
+<wire x1="6" y1="-6" x2="-5" y2="-6" width="0.127" layer="51" style="shortdash"/>
+<wire x1="-5" y1="-6" x2="-5" y2="6" width="0.127" layer="51" style="shortdash"/>
 <smd name="5V" x="-0.2" y="-3.5" dx="7.5" dy="1.5" layer="1"/>
 <smd name="GND" x="-0.2" y="3.5" dx="7.5" dy="1.5" layer="1"/>
 <text x="-4.318" y="-2.032" size="0.6096" layer="48" rot="R90">edge of PCB</text>
 <text x="2.032" y="5.842" size="0.6096" layer="48" rot="R180">edge of PCB</text>
 <text x="1.778" y="-5.08" size="0.6096" layer="48" rot="R180">edge of PCB</text>
+<polygon width="0.127" layer="41">
+<vertex x="6" y="4.5"/>
+<vertex x="6" y="6"/>
+<vertex x="-5" y="6"/>
+<vertex x="-5" y="-6"/>
+<vertex x="6" y="-6"/>
+<vertex x="6" y="-4.5"/>
+<vertex x="-4.25" y="-4.5"/>
+<vertex x="-4.25" y="-2.5"/>
+<vertex x="6" y="-2.5"/>
+<vertex x="6" y="2.5"/>
+<vertex x="-4.25" y="2.5"/>
+<vertex x="-4.25" y="4.5"/>
+</polygon>
+<polygon width="0.127" layer="42">
+<vertex x="6" y="-6"/>
+<vertex x="6" y="6"/>
+<vertex x="-5" y="6"/>
+<vertex x="-5" y="-6"/>
+</polygon>
 </package>
 <package name="SOT23" urn="urn:adsk.eagle:footprint:28669/1">
 <description>&lt;b&gt;SOT-23&lt;/b&gt;</description>
@@ -5042,7 +5088,7 @@ For boards designed to be plugged directly into a USB slot. If possible, ensure 
 <symbol name="GND">
 <wire x1="-1.905" y1="0" x2="1.905" y2="0" width="0.254" layer="94"/>
 <pin name="GND" x="0" y="2.54" visible="off" length="short" direction="sup" rot="R270"/>
-<text x="-2.54" y="-2.54" size="1.778" layer="96">&gt;VALUE</text>
+<text x="0" y="-1.905" size="1.27" layer="94" align="bottom-center">GND</text>
 </symbol>
 <symbol name="VCC">
 <wire x1="1.27" y1="-1.905" x2="0" y2="0" width="0.254" layer="94"/>
@@ -6989,7 +7035,7 @@ These are standard SMD and PTH capacitors. Normally 47uF, 100uF, and 470uF in el
 </device>
 </devices>
 </deviceset>
-<deviceset name="GND" prefix="GND">
+<deviceset name="SYMBOL_GND" prefix="GND">
 <description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
 <gates>
 <gate name="1" symbol="GND" x="0" y="0"/>
@@ -7002,7 +7048,7 @@ These are standard SMD and PTH capacitors. Normally 47uF, 100uF, and 470uF in el
 </device>
 </devices>
 </deviceset>
-<deviceset name="VCC" prefix="P+">
+<deviceset name="SYMBOL_VCC" prefix="P+">
 <description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
 <gates>
 <gate name="VCC" symbol="VCC" x="0" y="0"/>
@@ -7333,7 +7379,7 @@ These are standard SMD and PTH capacitors. Normally 47uF, 100uF, and 470uF in el
 </device>
 </devices>
 </deviceset>
-<deviceset name="VDD" prefix="P+">
+<deviceset name="SYMBOL_VDD" prefix="P+">
 <description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
 <gates>
 <gate name="G$1" symbol="VDD" x="0" y="0"/>
@@ -7346,7 +7392,7 @@ These are standard SMD and PTH capacitors. Normally 47uF, 100uF, and 470uF in el
 </device>
 </devices>
 </deviceset>
-<deviceset name="VBAT">
+<deviceset name="SYMBOL_VBAT">
 <gates>
 <gate name="G$1" symbol="VBAT" x="0" y="0"/>
 </gates>
@@ -7358,7 +7404,7 @@ These are standard SMD and PTH capacitors. Normally 47uF, 100uF, and 470uF in el
 </device>
 </devices>
 </deviceset>
-<deviceset name="VIN">
+<deviceset name="SYMBOL_VIN">
 <gates>
 <gate name="G$1" symbol="VIN" x="0" y="0"/>
 </gates>
