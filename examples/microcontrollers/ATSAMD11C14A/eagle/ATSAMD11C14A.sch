@@ -832,11 +832,11 @@ Uses "SWD" with a J-Tag</text>
 <instances>
 <instance part="GND4" gate="1" x="15.24" y="66.04" smashed="yes"/>
 <instance part="GND5" gate="1" x="60.96" y="63.5" smashed="yes"/>
-<instance part="GND1" gate="1" x="5.08" y="17.78" smashed="yes"/>
+<instance part="GND1" gate="1" x="2.54" y="17.78" smashed="yes"/>
 <instance part="GND6" gate="1" x="86.36" y="17.78" smashed="yes"/>
 <instance part="U$4" gate="G$1" x="7.62" y="76.2" smashed="yes" rot="MR0"/>
 <instance part="P+4" gate="G$1" x="88.9" y="78.74" smashed="yes"/>
-<instance part="P+5" gate="G$1" x="5.08" y="53.34" smashed="yes"/>
+<instance part="P+5" gate="G$1" x="2.54" y="53.34" smashed="yes"/>
 <instance part="P+1" gate="G$1" x="86.36" y="38.1" smashed="yes"/>
 <instance part="U$2" gate="G$1" x="45.72" y="76.2" smashed="yes"/>
 <instance part="U$5" gate="G$1" x="60.96" y="76.2" smashed="yes"/>
@@ -848,9 +848,9 @@ Uses "SWD" with a J-Tag</text>
 <attribute name="NAME" x="25.4" y="51.054" size="1.778" layer="95"/>
 <attribute name="VALUE" x="25.4" y="20.066" size="1.778" layer="96" align="top-left"/>
 </instance>
-<instance part="C1" gate="G$1" x="5.08" y="33.02" smashed="yes">
-<attribute name="NAME" x="6.604" y="35.941" size="1.778" layer="95"/>
-<attribute name="VALUE" x="6.604" y="30.861" size="1.778" layer="96"/>
+<instance part="C1" gate="G$1" x="2.54" y="33.02" smashed="yes">
+<attribute name="NAME" x="4.064" y="35.941" size="1.778" layer="95"/>
+<attribute name="VALUE" x="4.064" y="30.861" size="1.778" layer="96"/>
 </instance>
 <instance part="U$3" gate="G$1" x="93.98" y="33.02" smashed="yes" rot="R180"/>
 <instance part="R1" gate="G$1" x="25.4" y="83.82" smashed="yes">
@@ -871,10 +871,10 @@ Uses "SWD" with a J-Tag</text>
 <pinref part="U$6" gate="G$1" pin="GND"/>
 </segment>
 <segment>
-<wire x1="22.86" y1="22.86" x2="5.08" y2="22.86" width="0.1524" layer="91"/>
-<wire x1="5.08" y1="22.86" x2="5.08" y2="20.32" width="0.1524" layer="91"/>
-<junction x="5.08" y="22.86"/>
-<wire x1="5.08" y1="22.86" x2="5.08" y2="30.48" width="0.1524" layer="91"/>
+<wire x1="22.86" y1="22.86" x2="2.54" y2="22.86" width="0.1524" layer="91"/>
+<wire x1="2.54" y1="22.86" x2="2.54" y2="20.32" width="0.1524" layer="91"/>
+<junction x="2.54" y="22.86"/>
+<wire x1="2.54" y1="22.86" x2="2.54" y2="30.48" width="0.1524" layer="91"/>
 <pinref part="GND1" gate="1" pin="GND"/>
 <pinref part="U1" gate="G$1" pin="GND"/>
 <pinref part="C1" gate="G$1" pin="2"/>
@@ -916,24 +916,12 @@ Uses "SWD" with a J-Tag</text>
 <pinref part="R1" gate="G$1" pin="2"/>
 </segment>
 </net>
-<net name="RESET" class="0">
-<segment>
-<label x="20.32" y="45.72" size="1.27" layer="95" rot="R180" xref="yes"/>
-<wire x1="22.86" y1="45.72" x2="20.32" y2="45.72" width="0.1524" layer="91"/>
-<pinref part="U1" gate="G$1" pin="RESET"/>
-</segment>
-<segment>
-<wire x1="88.9" y1="30.48" x2="86.36" y2="30.48" width="0.1524" layer="91"/>
-<label x="86.36" y="30.48" size="1.27" layer="95" rot="MR0" xref="yes"/>
-<pinref part="U$3" gate="G$1" pin="2"/>
-</segment>
-</net>
 <net name="VDD" class="0">
 <segment>
-<wire x1="5.08" y1="50.8" x2="5.08" y2="48.26" width="0.1524" layer="91"/>
-<wire x1="22.86" y1="48.26" x2="5.08" y2="48.26" width="0.1524" layer="91"/>
-<junction x="5.08" y="48.26"/>
-<wire x1="5.08" y1="38.1" x2="5.08" y2="48.26" width="0.1524" layer="91"/>
+<wire x1="2.54" y1="50.8" x2="2.54" y2="48.26" width="0.1524" layer="91"/>
+<wire x1="22.86" y1="48.26" x2="2.54" y2="48.26" width="0.1524" layer="91"/>
+<junction x="2.54" y="48.26"/>
+<wire x1="2.54" y1="38.1" x2="2.54" y2="48.26" width="0.1524" layer="91"/>
 <pinref part="P+5" gate="G$1" pin="VDD"/>
 <pinref part="U1" gate="G$1" pin="VCC"/>
 <pinref part="C1" gate="G$1" pin="1"/>
@@ -1005,6 +993,18 @@ Uses "SWD" with a J-Tag</text>
 <wire x1="88.9" y1="25.4" x2="86.36" y2="25.4" width="0.1524" layer="91"/>
 <label x="86.36" y="25.4" size="1.27" layer="95" rot="MR0" xref="yes"/>
 <pinref part="U$3" gate="G$1" pin="4"/>
+</segment>
+</net>
+<net name="RESET_SAMD11" class="0">
+<segment>
+<label x="20.32" y="45.72" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="22.86" y1="45.72" x2="20.32" y2="45.72" width="0.1524" layer="91"/>
+<pinref part="U1" gate="G$1" pin="RESET"/>
+</segment>
+<segment>
+<wire x1="88.9" y1="30.48" x2="86.36" y2="30.48" width="0.1524" layer="91"/>
+<label x="86.36" y="30.48" size="1.27" layer="95" rot="MR0" xref="yes"/>
+<pinref part="U$3" gate="G$1" pin="2"/>
 </segment>
 </net>
 </nets>

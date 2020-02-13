@@ -1289,7 +1289,7 @@ internal 8MHz clock</text>
 <attribute name="NAME" x="45.72" y="69.342" size="1.778" layer="95"/>
 <attribute name="VALUE" x="45.72" y="2.54" size="1.778" layer="96"/>
 </instance>
-<instance part="P+1" gate="G$1" x="25.4" y="66.04" smashed="yes"/>
+<instance part="P+1" gate="G$1" x="15.24" y="66.04" smashed="yes"/>
 <instance part="GND1" gate="1" x="33.02" y="5.08" smashed="yes"/>
 <instance part="Y1" gate="G$1" x="33.02" y="30.48" smashed="yes">
 <attribute name="VALUE" x="35.56" y="22.86" size="1.778" layer="96"/>
@@ -1313,23 +1313,6 @@ internal 8MHz clock</text>
 <busses>
 </busses>
 <nets>
-<net name="RESET" class="0">
-<segment>
-<pinref part="U1" gate="U$1" pin="PC6(/RESET)"/>
-<wire x1="40.64" y1="66.04" x2="38.1" y2="66.04" width="0.1524" layer="91"/>
-<label x="38.1" y="66.04" size="1.27" layer="95" rot="R180" xref="yes"/>
-</segment>
-<segment>
-<pinref part="R1" gate="G$1" pin="1"/>
-<wire x1="121.92" y1="68.58" x2="119.38" y2="68.58" width="0.1524" layer="91"/>
-<label x="119.38" y="68.58" size="1.27" layer="95" rot="R180" xref="yes"/>
-</segment>
-<segment>
-<pinref part="U$2" gate="G$1" pin="1"/>
-<wire x1="124.46" y1="48.26" x2="121.92" y2="48.26" width="0.1524" layer="91"/>
-<label x="121.92" y="48.26" size="1.27" layer="95" rot="R180" xref="yes"/>
-</segment>
-</net>
 <net name="VDD" class="0">
 <segment>
 <pinref part="U1" gate="U$1" pin="VCC@6"/>
@@ -1344,13 +1327,14 @@ internal 8MHz clock</text>
 <junction x="38.1" y="60.96"/>
 <wire x1="38.1" y1="60.96" x2="25.4" y2="60.96" width="0.1524" layer="91"/>
 <pinref part="P+1" gate="G$1" pin="VDD"/>
-<wire x1="25.4" y1="60.96" x2="25.4" y2="63.5" width="0.1524" layer="91"/>
 <pinref part="C1" gate="G$1" pin="1"/>
 <wire x1="25.4" y1="58.42" x2="25.4" y2="60.96" width="0.1524" layer="91"/>
 <junction x="25.4" y="60.96"/>
 <wire x1="25.4" y1="60.96" x2="15.24" y2="60.96" width="0.1524" layer="91"/>
 <pinref part="C2" gate="G$1" pin="1"/>
 <wire x1="15.24" y1="60.96" x2="15.24" y2="58.42" width="0.1524" layer="91"/>
+<wire x1="15.24" y1="63.5" x2="15.24" y2="60.96" width="0.1524" layer="91"/>
+<junction x="15.24" y="60.96"/>
 </segment>
 </net>
 <net name="GND" class="0">
@@ -1476,6 +1460,23 @@ internal 8MHz clock</text>
 <pinref part="U$1" gate="G$1" pin="1"/>
 <wire x1="124.46" y1="15.24" x2="121.92" y2="15.24" width="0.1524" layer="91"/>
 <label x="121.92" y="15.24" size="1.27" layer="95" rot="R180" xref="yes"/>
+</segment>
+</net>
+<net name="RESET_328P" class="0">
+<segment>
+<pinref part="U1" gate="U$1" pin="PC6(/RESET)"/>
+<wire x1="40.64" y1="66.04" x2="38.1" y2="66.04" width="0.1524" layer="91"/>
+<label x="38.1" y="66.04" size="1.27" layer="95" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="R1" gate="G$1" pin="1"/>
+<wire x1="121.92" y1="68.58" x2="119.38" y2="68.58" width="0.1524" layer="91"/>
+<label x="119.38" y="68.58" size="1.27" layer="95" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U$2" gate="G$1" pin="1"/>
+<wire x1="124.46" y1="48.26" x2="121.92" y2="48.26" width="0.1524" layer="91"/>
+<label x="121.92" y="48.26" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 </nets>

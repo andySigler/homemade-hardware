@@ -1458,7 +1458,6 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 <part name="GND1" library="homemade-hardware" deviceset="SYMBOL_GND" device=""/>
 <part name="Y1" library="homemade-hardware" deviceset="COMPONENT_RESONATOR" device="-1.2MM-PITCH" value="16MHz"/>
 <part name="R1" library="homemade-hardware" deviceset="COMPONENT_RESISTOR" device="-0805" value="10k"/>
-<part name="P+2" library="homemade-hardware" deviceset="SYMBOL_VDD" device=""/>
 <part name="C1" library="homemade-hardware" deviceset="COMPONENT_CAP" device="-0805" value="0.1uF"/>
 <part name="GND2" library="homemade-hardware" deviceset="SYMBOL_GND" device=""/>
 <part name="C2" library="homemade-hardware" deviceset="COMPONENT_CAP" device="-0805" value="10uF"/>
@@ -1481,6 +1480,7 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 <part name="C5" library="homemade-hardware" deviceset="COMPONENT_CAP" device="-0805" value="10uF"/>
 <part name="R2" library="homemade-hardware" deviceset="COMPONENT_RESISTOR" device="-0805" value="22"/>
 <part name="R3" library="homemade-hardware" deviceset="COMPONENT_RESISTOR" device="-0805" value="22"/>
+<part name="P+2" library="homemade-hardware" deviceset="SYMBOL_VDD" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -1501,7 +1501,6 @@ over USB</text>
 <instance part="R1" gate="G$1" x="127" y="68.58" smashed="yes">
 <attribute name="VALUE" x="123.19" y="65.278" size="1.778" layer="96"/>
 </instance>
-<instance part="P+2" gate="G$1" x="134.62" y="73.66" smashed="yes"/>
 <instance part="C1" gate="G$1" x="20.32" y="73.66" smashed="yes">
 <attribute name="VALUE" x="21.844" y="71.501" size="1.778" layer="96"/>
 </instance>
@@ -1547,27 +1546,11 @@ over USB</text>
 <instance part="R3" gate="G$1" x="35.56" y="116.84" smashed="yes">
 <attribute name="VALUE" x="31.75" y="113.538" size="1.778" layer="96"/>
 </instance>
+<instance part="P+2" gate="G$1" x="134.62" y="73.66" smashed="yes"/>
 </instances>
 <busses>
 </busses>
 <nets>
-<net name="RESET" class="0">
-<segment>
-<wire x1="43.18" y1="83.82" x2="40.64" y2="83.82" width="0.1524" layer="91"/>
-<label x="40.64" y="83.82" size="1.27" layer="95" rot="R180" xref="yes"/>
-<pinref part="U$3" gate="G$1" pin="!RESET"/>
-</segment>
-<segment>
-<pinref part="R1" gate="G$1" pin="1"/>
-<wire x1="121.92" y1="68.58" x2="119.38" y2="68.58" width="0.1524" layer="91"/>
-<label x="119.38" y="68.58" size="1.27" layer="95" rot="R180" xref="yes"/>
-</segment>
-<segment>
-<pinref part="U$2" gate="G$1" pin="1"/>
-<wire x1="124.46" y1="48.26" x2="121.92" y2="48.26" width="0.1524" layer="91"/>
-<label x="121.92" y="48.26" size="1.27" layer="95" rot="R180" xref="yes"/>
-</segment>
-</net>
 <net name="VDD" class="0">
 <segment>
 <pinref part="P+1" gate="G$1" pin="VDD"/>
@@ -1599,6 +1582,12 @@ over USB</text>
 <wire x1="132.08" y1="99.06" x2="137.16" y2="99.06" width="0.1524" layer="91"/>
 <pinref part="P+3" gate="G$1" pin="VDD"/>
 <wire x1="137.16" y1="99.06" x2="137.16" y2="101.6" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="R1" gate="G$1" pin="2"/>
+<wire x1="132.08" y1="68.58" x2="134.62" y2="68.58" width="0.1524" layer="91"/>
+<wire x1="134.62" y1="68.58" x2="134.62" y2="71.12" width="0.1524" layer="91"/>
+<pinref part="P+2" gate="G$1" pin="VDD"/>
 </segment>
 </net>
 <net name="GND" class="0">
@@ -1690,14 +1679,6 @@ over USB</text>
 <wire x1="43.18" y1="33.02" x2="38.1" y2="33.02" width="0.1524" layer="91"/>
 <wire x1="38.1" y1="33.02" x2="38.1" y2="30.48" width="0.1524" layer="91"/>
 <pinref part="U$3" gate="G$1" pin="XTAL2"/>
-</segment>
-</net>
-<net name="N$4" class="0">
-<segment>
-<pinref part="R1" gate="G$1" pin="2"/>
-<wire x1="132.08" y1="68.58" x2="134.62" y2="68.58" width="0.1524" layer="91"/>
-<wire x1="134.62" y1="68.58" x2="134.62" y2="71.12" width="0.1524" layer="91"/>
-<pinref part="P+2" gate="G$1" pin="VDD"/>
 </segment>
 </net>
 <net name="SPI_SCK" class="0">
@@ -1841,6 +1822,23 @@ over USB</text>
 <wire x1="25.4" y1="116.84" x2="25.4" y2="121.92" width="0.1524" layer="91"/>
 <pinref part="R2" gate="G$1" pin="1"/>
 <wire x1="25.4" y1="121.92" x2="30.48" y2="121.92" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="RESET_32U4" class="0">
+<segment>
+<wire x1="43.18" y1="83.82" x2="40.64" y2="83.82" width="0.1524" layer="91"/>
+<label x="40.64" y="83.82" size="1.27" layer="95" rot="R180" xref="yes"/>
+<pinref part="U$3" gate="G$1" pin="!RESET"/>
+</segment>
+<segment>
+<pinref part="R1" gate="G$1" pin="1"/>
+<wire x1="121.92" y1="68.58" x2="119.38" y2="68.58" width="0.1524" layer="91"/>
+<label x="119.38" y="68.58" size="1.27" layer="95" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U$2" gate="G$1" pin="1"/>
+<wire x1="124.46" y1="48.26" x2="121.92" y2="48.26" width="0.1524" layer="91"/>
+<label x="121.92" y="48.26" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 </nets>

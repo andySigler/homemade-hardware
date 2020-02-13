@@ -161,116 +161,6 @@
 </layers>
 <schematic xreflabel="%F%N/%S.%C%R" xrefpart="/%S.%C%R">
 <libraries>
-<library name="homemade-hardware">
-<packages>
-<package name="CR2032-SMD">
-<description>PN: BAT-HLD-001-TRDKR-ND</description>
-<smd name="-" x="0" y="0" dx="17.8" dy="17.8" layer="1" roundness="100"/>
-<smd name="+2" x="11.45" y="0" dx="2.5" dy="5.1" layer="1"/>
-<smd name="+1" x="-11.45" y="0" dx="2.5" dy="5.1" layer="1"/>
-<wire x1="-10.55" y1="-4.75" x2="-10.55" y2="4.45" width="0.127" layer="21"/>
-<wire x1="10.55" y1="-4.75" x2="10.55" y2="4.45" width="0.127" layer="21"/>
-<wire x1="-7.65" y1="7.35" x2="7.65" y2="7.35" width="0.127" layer="21"/>
-<circle x="0" y="0" radius="10" width="0.5" layer="21"/>
-<wire x1="-7.15" y1="-8.15" x2="-5.7" y2="-8.15" width="0.127" layer="21"/>
-<wire x1="5.7" y1="-8.15" x2="7.1" y2="-8.15" width="0.127" layer="21"/>
-<wire x1="-10.55" y1="4.45" x2="-7.65" y2="7.35" width="0.127" layer="21"/>
-<wire x1="10.55" y1="4.45" x2="7.65" y2="7.35" width="0.127" layer="21"/>
-<wire x1="-10.55" y1="-4.75" x2="-7.15" y2="-8.15" width="0.127" layer="21"/>
-<wire x1="10.55" y1="-4.75" x2="7.1" y2="-8.15" width="0.127" layer="21"/>
-<wire x1="-5.7" y1="-8.15" x2="5.7" y2="-8.15" width="0.127" layer="21" curve="-71.794755"/>
-<wire x1="-7.25" y1="0" x2="-3.4" y2="0.1" width="0.127" layer="21" curve="-280.747547"/>
-<wire x1="-7.3" y1="-4.6" x2="-7.2" y2="-4.6" width="0.127" layer="21"/>
-<wire x1="-7.2" y1="-4.6" x2="-3.5" y2="-4.6" width="0.127" layer="21"/>
-<wire x1="-3.5" y1="-4.6" x2="-3.5" y2="1.1" width="0.127" layer="21"/>
-<wire x1="-3.5" y1="1.1" x2="-7.2" y2="1.1" width="0.127" layer="21"/>
-<wire x1="-7.2" y1="1.1" x2="-7.2" y2="-4.6" width="0.127" layer="21"/>
-<wire x1="-7.2" y1="1.1" x2="-7.2" y2="2.2" width="0.127" layer="21"/>
-<wire x1="-7.2" y1="2.2" x2="-5.2" y2="4.1" width="0.127" layer="21" curve="-90"/>
-<wire x1="-5.2" y1="4.1" x2="-3.5" y2="2.3" width="0.127" layer="21" curve="-90"/>
-<wire x1="-3.5" y1="2.3" x2="-3.5" y2="1.1" width="0.127" layer="21"/>
-<wire x1="2.35" y1="0" x2="6.2" y2="0.1" width="0.127" layer="21" curve="-280.747547"/>
-<wire x1="2.3" y1="-4.6" x2="2.4" y2="-4.6" width="0.127" layer="21"/>
-<wire x1="2.4" y1="-4.6" x2="6.1" y2="-4.6" width="0.127" layer="21"/>
-<wire x1="6.1" y1="-4.6" x2="6.1" y2="1.1" width="0.127" layer="21"/>
-<wire x1="6.1" y1="1.1" x2="2.4" y2="1.1" width="0.127" layer="21"/>
-<wire x1="2.4" y1="1.1" x2="2.4" y2="-4.6" width="0.127" layer="21"/>
-<wire x1="2.4" y1="1.1" x2="2.4" y2="2.2" width="0.127" layer="21"/>
-<wire x1="2.4" y1="2.2" x2="4.4" y2="4.1" width="0.127" layer="21" curve="-90"/>
-<wire x1="4.4" y1="4.1" x2="6.1" y2="2.3" width="0.127" layer="21" curve="-90"/>
-<wire x1="6.1" y1="2.3" x2="6.1" y2="1.1" width="0.127" layer="21"/>
-</package>
-<package name="JST-PH-2-SMT-RA">
-<description>2-Pin JST PH Series Right-Angle Connector (+/- for batteries)</description>
-<wire x1="-4" y1="3" x2="4" y2="3" width="0.2032" layer="51"/>
-<wire x1="4" y1="3" x2="4" y2="-4.5" width="0.2032" layer="51"/>
-<wire x1="-4" y1="-4.5" x2="-4" y2="3" width="0.2032" layer="51"/>
-<wire x1="3.2" y1="-2" x2="-3.2" y2="-2" width="0.2032" layer="51"/>
-<wire x1="-3.2" y1="-2" x2="-3.2" y2="-4.5" width="0.2032" layer="51"/>
-<wire x1="-3.2" y1="-4.5" x2="-4" y2="-4.5" width="0.2032" layer="51"/>
-<wire x1="4" y1="-4.5" x2="3.2" y2="-4.5" width="0.2032" layer="51"/>
-<wire x1="3.2" y1="-4.5" x2="3.2" y2="-2" width="0.2032" layer="51"/>
-<wire x1="-2.25" y1="3" x2="2.25" y2="3" width="0.127" layer="21"/>
-<wire x1="4" y1="-0.5" x2="4" y2="-4.5" width="0.127" layer="21"/>
-<wire x1="4" y1="-4.5" x2="3.15" y2="-4.5" width="0.127" layer="21"/>
-<wire x1="3.15" y1="-4.5" x2="3.15" y2="-2" width="0.127" layer="21"/>
-<wire x1="3.15" y1="-2" x2="1.75" y2="-2" width="0.127" layer="21"/>
-<wire x1="-1.75" y1="-2" x2="-3.15" y2="-2" width="0.127" layer="21"/>
-<wire x1="-3.15" y1="-2" x2="-3.15" y2="-4.5" width="0.127" layer="21"/>
-<wire x1="-3.15" y1="-4.5" x2="-4" y2="-4.5" width="0.127" layer="21"/>
-<wire x1="-4" y1="-4.5" x2="-4" y2="-0.5" width="0.127" layer="21"/>
-<smd name="1" x="1" y="-3.825" dx="1" dy="4.35" layer="1"/>
-<smd name="2" x="-1" y="-3.825" dx="1" dy="4.35" layer="1"/>
-<smd name="NC1" x="-3.4" y="1.625" dx="3.15" dy="1.6" layer="1" rot="R90"/>
-<smd name="NC2" x="3.4" y="1.625" dx="3.15" dy="1.6" layer="1" rot="R90"/>
-<text x="-2.54" y="3.81" size="1.27" layer="25" font="vector">&gt;Name</text>
-<text x="-2.54" y="-7.62" size="1.27" layer="27" font="vector">&gt;Value</text>
-<text x="2.286" y="-6.096" size="1.4224" layer="21" ratio="12">+</text>
-<text x="-3.429" y="-6.096" size="1.4224" layer="21" ratio="12">-</text>
-</package>
-</packages>
-<symbols>
-<symbol name="BATTERY">
-<pin name="+" x="0" y="12.7" length="middle" rot="R270"/>
-<pin name="-" x="0" y="-12.7" length="middle" rot="R90"/>
-<circle x="0" y="0" radius="7.62" width="0.254" layer="94"/>
-<wire x1="0" y1="5.08" x2="0" y2="1.27" width="0.508" layer="94"/>
-<wire x1="-1.905" y1="-3.175" x2="1.905" y2="-3.175" width="0.508" layer="94"/>
-<wire x1="-1.905" y1="3.175" x2="1.905" y2="3.175" width="0.508" layer="94"/>
-<text x="2.54" y="8.89" size="1.27" layer="95">&gt;NAME</text>
-<text x="2.54" y="-10.16" size="1.27" layer="96">&gt;VALUE</text>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="CONN_BATTERY">
-<gates>
-<gate name="G$1" symbol="BATTERY" x="0" y="0"/>
-</gates>
-<devices>
-<device name="-COIN" package="CR2032-SMD">
-<connects>
-<connect gate="G$1" pin="+" pad="+1 +2"/>
-<connect gate="G$1" pin="-" pad="-"/>
-</connects>
-<technologies>
-<technology name="">
-<attribute name="PN" value="BAT-HLD-001-TR" constant="no"/>
-</technology>
-</technologies>
-</device>
-<device name="-LIPO-HORIZ" package="JST-PH-2-SMT-RA">
-<connects>
-<connect gate="G$1" pin="+" pad="1"/>
-<connect gate="G$1" pin="-" pad="2"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 </libraries>
 <attributes>
 </attributes>
@@ -281,16 +171,14 @@
 </class>
 </classes>
 <parts>
-<part name="U$1" library="homemade-hardware" deviceset="CONN_BATTERY" device="-LIPO-HORIZ"/>
-<part name="U$2" library="homemade-hardware" deviceset="CONN_BATTERY" device="-LIPO-HORIZ"/>
 </parts>
 <sheets>
 <sheet>
 <plain>
+<text x="5.08" y="7.62" size="5.08" layer="91">The BRD and SCH file must have the same name
+or they will lose their link</text>
 </plain>
 <instances>
-<instance part="U$1" gate="G$1" x="10.16" y="27.94" smashed="yes"/>
-<instance part="U$2" gate="G$1" x="226.06" y="27.94" smashed="yes"/>
 </instances>
 <busses>
 </busses>
@@ -300,4 +188,10 @@
 </sheets>
 </schematic>
 </drawing>
+<compatibility>
+<note version="6.3" minversion="6.2.2" severity="warning">
+Since Version 6.2.2 text objects can contain more than one line,
+which will not be processed correctly with this version.
+</note>
+</compatibility>
 </eagle>

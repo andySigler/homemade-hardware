@@ -36,7 +36,4 @@
 *.btm
 
 # Design files not sharing
-*marquee_h.brd
-*marquee-h.brd
-*Marquee_H.brd
-*Marquee-H.brd
+private/*
