@@ -314,7 +314,7 @@ Source: http://www.osram.convergy.de/ ... lb_r99a.pdf</description>
 <class number="0" name="default" width="0" drill="0">
 </class>
 </classes>
-<designrules name="default">
+<designrules name="Endmill-1-32-Bantam">
 <description language="en">&lt;b&gt;1/32&quot; Endmill Bantam&lt;/b&gt;
 &lt;p&gt;Modified from &quot;Othermill EAGLE Design Rules v2&quot;&lt;/p&gt;
 &lt;b&gt;-- Rules --&lt;/b&gt;
