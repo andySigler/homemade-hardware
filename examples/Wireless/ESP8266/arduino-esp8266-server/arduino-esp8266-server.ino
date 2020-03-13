@@ -1,104 +1,107 @@
+/*
+
+This example demos using the ESP8266 control an LED by creating an HTTP server.
+
+1) Enter your wifi credentials into the variables `wifi_name` and `wifi_password`
+2) Upload to ESP8266
+3) Open Serial monitor at baudrate 115200 to see print statements from ESP8266
+
+The ESP8266 will then attempt to connect to the wifi network, blinking it's LED while waiting.
+
+Once connected, make sure your computer is on the same wifi network.
+Point your browser to the URL: "esp8266.local/on"
+  - then, the LED will turn on
+
+All the URLs you can point to:
+
+1) "esp8266.local" (get the current LED brightness)
+2) "esp8266.local/on" (turn the LED on)
+3) "esp8266.local/off" (turn the LED off)
+4) "esp8266.local/random" (turn the LED off)
+
+*/
+
 #include <ESP8266WiFi.h>
 #include <WiFiClient.h>
 #include <ESP8266WebServer.h>
 #include <ESP8266mDNS.h>
 
-#include <Wire.h>
-#include <Adafruit_Sensor.h>
-#include <Adafruit_LSM303_U.h>
+const char* wifi_name = "WIFI_NAME";
+const char* wifi_password = "";
 
-const char* ssid = "Andy-AP";
-
-const int ledPinMag = 2;
-
-float minX = 1000;
-float maxX = -1000;
+const int led_pin = 2;
 int brightness = 0;
 
 ESP8266WebServer server(80);
-Adafruit_LSM303_Mag_Unified mag = Adafruit_LSM303_Mag_Unified(12345);
 
-void displaySensorDetails(void) {
-  sensor_t sensor;
-  mag.getSensor(&sensor);
-  Serial.println("------------------------------------");
-  Serial.print  ("Sensor:       "); Serial.println(sensor.name);
-  Serial.print  ("Driver Ver:   "); Serial.println(sensor.version);
-  Serial.print  ("Unique ID:    "); Serial.println(sensor.sensor_id);
-  Serial.print  ("Max Value:    "); Serial.print(sensor.max_value); Serial.println(" uT");
-  Serial.print  ("Min Value:    "); Serial.print(sensor.min_value); Serial.println(" uT");
-  Serial.print  ("Resolution:   "); Serial.print(sensor.resolution); Serial.println(" uT");  
-  Serial.println("------------------------------------");
-  Serial.println("");
-  delay(500);
-}
-
-void magConnect(void) {
-  mag.enableAutoRange(true);
-  while(!mag.begin()) {
-    Serial.println("Ooops, no LSM303 detected ... Check your wiring!");
-    delay(1000);
-  }
-  displaySensorDetails();
-}
-
-void wifiConnect(void) {
+void wifi_connect(void) {
   WiFi.mode(WIFI_STA);
-  WiFi.begin(ssid);
+  if (wifi_password && strlen(wifi_password) > 0) {
+    WiFi.begin(wifi_name, wifi_password);
+  } else {
+    WiFi.begin(wifi_name);
+  }
   // Wait for connection
   while (WiFi.status() != WL_CONNECTED) {
-    delay(500);
+    digitalWrite(led_pin, HIGH);
+    delay(250);
+    digitalWrite(led_pin, LOW);
+    delay(250);
     Serial.print(".");
   }
-  Serial.println("");
-  Serial.print("Connected to ");
-  Serial.println(ssid);
-  Serial.print("IP address: ");
-  Serial.println(WiFi.localIP());
 }
 
-void handleNotFound() {
+void handle_not_found() {
   server.send(404, "text/plain", "File Not Found");
 }
 
-void createServer(void) {
+void handle_response(int new_brightness) {
+  Serial.println("Got HTTP request: " + String(new_brightness));
+  if (new_brightness >= 0) {
+    brightness = new_brightness;
+  }
+  server.send(200, "text/plain", "Brightness: " + String(brightness));
+}
+
+void create_server(void) {
   if (MDNS.begin("esp8266")) {
     Serial.println("MDNS responder started");
   }
+  server.onNotFound(handle_not_found);
   server.on("/", []() {
-    server.send(200, "text/plain", "Color is random\n\nSensor: " + String(brightness));
+    handle_response(-1);
   });
-  server.on("/red", []() {
-    server.send(200, "text/plain", "Color is red\n\nSensor: " + String(brightness));
+  server.on("/on", []() {
+    handle_response(255);
   });
-  server.on("/green", []() {
-    server.send(200, "text/plain", "Color is green\n\nSensor: " + String(brightness));
+  server.on("/off", []() {
+    handle_response(0);
   });
-  server.on("/blue", []() {
-    server.send(200, "text/plain", "Color is blue\n\nSensor: " + String(brightness));
+  server.on("/random", []() {
+    handle_response(random(0, 255));
   });
-  server.onNotFound(handleNotFound);
   server.begin();
-  Serial.println("HTTP server started");
 }
 
 void setup(void) {
-  pinMode(ledPinMag, OUTPUT);
-  digitalWrite(ledPinMag, LOW);
   Serial.begin(115200);
-  magConnect();
-  wifiConnect();
-  createServer();
+  Serial.println("\n\n\nDemo Beginning");
+  pinMode(led_pin, OUTPUT);
+  
+  Serial.println("Trying to connect to Wifi...");
+  wifi_connect();
+  Serial.println("");
+  Serial.print("Connected to ");
+  Serial.println(wifi_name);
+  Serial.print("IP address: ");
+  Serial.println(WiFi.localIP());
+  
+  create_server();
+  Serial.println("HTTP server started");
 }
 
 void loop(void) {
   server.handleClient();
   MDNS.update();
-  sensors_event_t event; 
-  mag.getEvent(&event);
-  float x = event.magnetic.x;
-  if (x < minX) minX = x;
-  if (x > maxX) maxX = x;
-  brightness = map(x, minX, maxX, 0, 255);
-  analogWrite(ledPinMag, brightness);
+  analogWrite(led_pin, brightness);
 }
